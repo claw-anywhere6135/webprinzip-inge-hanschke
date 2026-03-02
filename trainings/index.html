@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trainings — Webinare &amp; Schulungen | Hanschke Consulting</title>
-  <meta name="description" content="Kostenlose Freitags-Webinare und 2-tägige Schulungen von Inge Hanschke: EAM, Strategisches IT-Management, Business-Analyse, KI &amp; Data, Informationssicherheit. Alle Formate auf einen Blick.">
-  <meta property="og:title" content="Trainings — Webinare &amp; Schulungen | Hanschke Consulting">
-  <meta property="og:description" content="Kostenlose Webinare (BPEAM, DIG, LDM, AGILE, ISMS) und offene Schulungen (EAM1, EAM2, STRAT, BADM, ITMGMT, ISMS, ZBR). Alle Formate von Inge Hanschke.">
+  <title>Schulungen — Offene Trainings &amp; Inhouse | Hanschke Consulting</title>
+  <meta name="description" content="Praxisorientierte 2-tägige Schulungen von Inge Hanschke: EAM, Strategisches IT-Management, KI &amp; Data, Business-Analyse, Lean Value Management. Alle Termine und Preise.">
+  <meta property="og:title" content="Schulungen — Hanschke Consulting">
+  <meta property="og:description" content="Offene Schulungen und Inhouse-Trainings. EAM, IT-Strategie, KI &amp; Data, Business-Analyse. Alle Termine 2026/2027.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.hanschke-consulting.com/trainings/">
   <meta property="og:image" content="https://www.hanschke-consulting.com/og-image.jpg">
@@ -20,15 +20,18 @@
       --red: #E94545; --red-dk: #c83030; --black: #0a0a0a; --g900: #141414;
       --g800: #282828; --g700: #3c3c3c; --g600: #666; --g400: #999;
       --g200: #e0e0e0; --g100: #f5f5f5; --g50: #fafafa; --white: #fff;
-      --teal: #1a7d8b; --f: 'Inter', sans-serif; --max: 1200px; --r: 2px;
+      --teal: #1a7d8b; --blue: #2563eb; --blue-bg: #eff6ff;
+      --f: 'Inter', sans-serif; --max: 1200px; --r: 2px;
       --ease: cubic-bezier(.25,.1,.25,1);
     }
     body { font-family: var(--f); background: var(--white); color: var(--black); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; }
     a { color: inherit; text-decoration: none; }
-    ul { list-style: none; }
+    ul.clean { list-style: none; }
     .wrap { max-width: var(--max); margin: 0 auto; padding: 0 48px; }
     .ey { display: inline-flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--red); }
     .ey::before { content:''; display:block; width:20px; height:2px; background:var(--red); flex-shrink:0; }
+    .ey.blue { color: var(--blue); }
+    .ey.blue::before { background: var(--blue); }
     h1 { font-size: clamp(2.4rem,5.5vw,4rem); font-weight: 900; line-height: 1.08; letter-spacing: -.035em; }
     h2 { font-size: clamp(1.8rem,3vw,2.6rem); font-weight: 700; line-height: 1.1; letter-spacing: -.025em; }
     h3 { font-size: 1rem; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; }
@@ -44,6 +47,8 @@
     .btn-outline:hover { border-color: var(--black); }
     .btn-outline-w { background: transparent; color: var(--white); border-color: rgba(255,255,255,.35); }
     .btn-outline-w:hover { background: var(--white); color: var(--black); border-color: var(--white); }
+    .btn-blue { background: var(--blue); color: var(--white); border-color: var(--blue); }
+    .btn-blue:hover { background: #1d4ed8; border-color: #1d4ed8; }
     .sec { padding: 96px 0; }
     .sec-sm { padding: 64px 0; }
 
@@ -68,18 +73,6 @@
     .mmenu.open { display:flex; }
     .mmenu a { font-size:1.05rem; font-weight:600; color:var(--black); padding:13px 0; border-bottom:1px solid var(--g100); }
     .mmenu .btn { margin-top:20px; align-self:flex-start; }
-    /* DROPDOWN NAV */
-    .nav-item { position: relative; list-style: none; }
-    .nav-drop > a { display: flex !important; align-items: center; gap: 5px; }
-    .nav-caret { width: 0; height: 0; border-left: 3.5px solid transparent; border-right: 3.5px solid transparent; border-top: 4px solid var(--g600); transition: transform .15s var(--ease), border-top-color .15s; flex-shrink: 0; margin-top: 1px; }
-    .nav-drop > a:hover .nav-caret { border-top-color: var(--black); }
-    .nav-drop:hover > a .nav-caret { transform: rotate(180deg); }
-    .drop-menu { display: none; position: absolute; top: calc(100% + 10px); left: 50%; transform: translateX(-50%); background: var(--white); border: 1px solid var(--g200); border-radius: 4px; box-shadow: 0 12px 40px rgba(0,0,0,.1); min-width: 250px; padding: 6px 0; z-index: 300; }
-    .nav-drop:hover .drop-menu { display: block; }
-    .drop-menu a { display: block !important; padding: 9px 18px; font-size: 12.5px !important; font-weight: 500 !important; color: var(--g700) !important; transition: background .12s, color .12s; white-space: nowrap; border-bottom: none !important; }
-    .drop-menu a:hover { background: var(--g50); color: var(--black) !important; }
-    .drop-divider { height: 1px; background: var(--g100); margin: 4px 8px; }
-    .mmenu-sub { padding-left: 24px !important; font-size: .9rem !important; font-weight: 500 !important; color: var(--g600) !important; }
 
     /* PAGE HERO */
     #page-hero { padding-top: 60px; background: var(--white); position: relative; overflow: hidden; }
@@ -89,26 +82,6 @@
     .page-hero-bc { font-size: 12px; font-weight: 500; color: var(--g400); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
     .page-hero-bc a { color: var(--g400); transition: color .14s; }
     .page-hero-bc a:hover { color: var(--black); }
-    .page-hero-bc span { color: var(--g200); }
-
-    /* FORMAT COMPARE */
-    #formate { background: var(--black); }
-    .format-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,.07); }
-    .format-card { background: var(--g900); padding: 40px; }
-    .format-card.highlight { border-top: 3px solid var(--red); }
-    .fc-type { font-size: 10px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 10px; }
-    .fc-type.free { color: var(--red); }
-    .fc-type.paid { color: rgba(255,255,255,.4); }
-    .format-card h3 { font-size: 1.3rem; font-weight: 800; color: var(--white); margin-bottom: 16px; letter-spacing: -.02em; }
-    .fc-attrs { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
-    .fc-attr { display: flex; align-items: flex-start; gap: 10px; }
-    .fc-attr-label { font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.3); min-width: 90px; flex-shrink: 0; padding-top: 2px; }
-    .fc-attr-val { font-size: .88rem; color: rgba(255,255,255,.7); line-height: 1.5; }
-    .fc-attr-val strong { color: var(--white); font-weight: 600; }
-    .fc-codes { display: flex; gap: 6px; flex-wrap: wrap; }
-    .fc-code { font-size: 9.5px; font-weight: 800; letter-spacing: .1em; padding: 3px 8px; border-radius: 2px; }
-    .fc-code.free { background: rgba(233,69,69,.15); color: var(--red); }
-    .fc-code.paid { background: rgba(255,255,255,.07); color: rgba(255,255,255,.5); }
 
     /* ANCHOR NAV */
     #anav { background: var(--g100); border-bottom: 1px solid var(--g200); position: sticky; top: 60px; z-index: 100; }
@@ -123,34 +96,70 @@
     .sh h2 { font-size: 1.4rem; }
     .sh-count { font-size: 12px; font-weight: 600; color: var(--g400); }
 
-    /* WEBINAR LIST */
-    #webinare { background: var(--white); }
+    /* TRAINING TABLE */
     .training-table { width: 100%; border-collapse: collapse; border: 1px solid var(--g200); }
     .training-table thead th { background: var(--black); color: var(--white); font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 12px 16px; text-align: left; }
+    .training-table.blue-table thead th { background: var(--blue); }
     .training-table tbody tr { border-bottom: 1px solid var(--g200); transition: background .12s; }
     .training-table tbody tr:last-child { border-bottom: none; }
     .training-table tbody tr:hover { background: var(--g50); }
-    .training-table td { padding: 16px; vertical-align: middle; }
+    .training-table td { padding: 16px; vertical-align: top; }
     .td-code { font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
-    .td-code.webinar { color: var(--red); }
-    .td-code.schulung { color: var(--black); }
+    .td-code.red { color: var(--red); }
+    .td-code.blue { color: var(--blue); }
     .td-name { font-size: .9rem; font-weight: 600; color: var(--black); }
-    .td-topic { font-size: .82rem; color: var(--g600); margin-top: 3px; }
-    .td-termin { font-size: .85rem; color: var(--g600); white-space: nowrap; }
+    .td-desc { font-size: .82rem; color: var(--g600); margin-top: 3px; }
+    .td-termin { font-size: .85rem; color: var(--g600); }
     .td-termin strong { color: var(--black); }
-    .td-format { font-size: .82rem; color: var(--g600); }
-    .td-free { font-size: 11px; font-weight: 700; color: var(--red); letter-spacing: .04em; }
-    .td-link a { font-size: 12px; }
-    .td-detail a { font-size: 11px; color: var(--g400); text-decoration: underline; text-underline-offset: 3px; }
+    .td-price { font-size: .88rem; font-weight: 700; color: var(--black); }
 
-    /* INHOUSE CTA */
-    .inhouse-cta { background: var(--g100); border: 1px solid var(--g200); border-radius: var(--r); padding: 32px 36px; display: flex; align-items: center; justify-content: space-between; gap: 40px; margin-top: 40px; }
-    .inhouse-cta h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
-    .inhouse-cta p { font-size: .88rem; color: var(--g600); line-height: 1.65; max-width: 460px; }
-    .inhouse-acts { display: flex; gap: 10px; flex-shrink: 0; flex-wrap: wrap; }
+    /* TRAINING DETAIL BLOCK */
+    .t-detail { border: 1px solid var(--g200); margin-bottom: 2px; }
+    .t-detail.blue-detail { border-color: #bfdbfe; }
+    .t-detail-head { display: flex; align-items: center; justify-content: space-between; padding: 24px 28px; cursor: pointer; user-select: none; transition: background .15s; position: relative; }
+    .t-detail-head:hover { background: var(--g50); }
+    .t-detail.blue-detail .t-detail-head:hover { background: var(--blue-bg); }
+    .t-detail-head::after { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; background: var(--red); transform: scaleY(0); transform-origin: top; transition: transform .2s var(--ease); }
+    .t-detail.blue-detail .t-detail-head::after { background: var(--blue); }
+    .t-detail.open .t-detail-head::after { transform: scaleY(1); }
+    .t-detail-left { display: flex; align-items: center; gap: 16px; flex: 1; min-width: 0; }
+    .t-detail-code { font-size: 11px; font-weight: 800; letter-spacing: .1em; color: var(--red); width: 60px; flex-shrink: 0; }
+    .t-detail.blue-detail .t-detail-code { color: var(--blue); }
+    .t-detail-info h3 { font-size: 1rem; font-weight: 700; letter-spacing: -.015em; }
+    .t-detail-tagline { font-size: 13px; color: var(--g600); margin-top: 2px; }
+    .t-detail-right { display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+    .t-detail-dates { font-size: 12px; color: var(--g600); text-align: right; }
+    .t-detail-dates strong { color: var(--black); display: block; }
+    .t-detail-toggle { width:28px; height:28px; border-radius:50%; border:1px solid var(--g200); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition: background .15s, border-color .15s; }
+    .t-detail-toggle svg { transition: transform .22s var(--ease); }
+    .t-detail.open .t-detail-toggle { background:var(--red); border-color:var(--red); }
+    .t-detail.blue-detail.open .t-detail-toggle { background:var(--blue); border-color:var(--blue); }
+    .t-detail.open .t-detail-toggle svg { transform: rotate(45deg); }
+    .t-detail.open .t-detail-toggle svg path { stroke: var(--white); }
+    .t-detail-body { display:none; padding: 0 28px 28px; border-top: 1px solid var(--g100); }
+    .t-detail.open .t-detail-body { display:block; }
+    .t-detail-body .t-grid { display: grid; grid-template-columns: 1fr 320px; gap: 36px; margin-top: 24px; }
+    .t-content h4 { font-size: .9rem; font-weight: 700; margin: 20px 0 10px; color: var(--black); }
+    .t-content h4:first-child { margin-top: 0; }
+    .t-content p { font-size: .88rem; line-height: 1.7; color: var(--g700); margin-bottom: 10px; }
+    .t-content ul { padding-left: 18px; margin-bottom: 14px; }
+    .t-content ul li { font-size: .86rem; line-height: 1.65; color: var(--g700); margin-bottom: 4px; }
+    .t-sidebar { background: var(--g50); border: 1px solid var(--g200); border-radius: var(--r); padding: 24px; }
+    .t-detail.blue-detail .t-sidebar { background: var(--blue-bg); border-color: #bfdbfe; }
+    .t-meta-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--g200); }
+    .t-meta-row:last-child { border-bottom: none; }
+    .t-meta-label { font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--g400); }
+    .t-meta-val { font-size: .88rem; font-weight: 600; color: var(--black); text-align: right; }
+    .t-dates-list { margin-top: 16px; }
+    .t-date-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--g200); }
+    .t-date-item:last-child { border-bottom: none; }
+    .t-date-val { font-size: .88rem; font-weight: 600; color: var(--black); }
 
-    /* SCHULUNGEN */
-    #schulungen { background: var(--g50); border-top: 1px solid var(--g200); }
+    /* BLUE SECTION DIVIDER */
+    .blue-divider { background: var(--blue); padding: 48px 0; margin-top: 64px; }
+    .blue-divider h2 { color: var(--white); font-size: 1.4rem; }
+    .blue-divider p { color: rgba(255,255,255,.6); font-size: .9rem; margin-top: 8px; }
+    .blue-divider .badge { display: inline-flex; align-items: center; gap: 6px; font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--white); background: rgba(255,255,255,.15); padding: 4px 10px; border-radius: 2px; margin-bottom: 14px; }
 
     /* CTA */
     #page-cta { background: var(--black); }
@@ -167,7 +176,6 @@
     .imp-close { position:fixed; top:20px; right:20px; width:40px; height:40px; background:var(--black); color:var(--white); border:none; border-radius:50%; font-size:18px; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:501; }
     .imp-content h1 { font-size:1.8rem; margin-bottom:32px; }
     .imp-content h2 { font-size:1.1rem; margin:28px 0 10px; color:var(--black); }
-    .imp-content h3 { font-size:.95rem; margin:20px 0 8px; }
     .imp-content p { font-size:.9rem; line-height:1.75; color:var(--g700); margin-bottom:12px; }
     .imp-content address { font-style:normal; font-size:.9rem; line-height:1.75; color:var(--g700); margin-bottom:12px; }
 
@@ -181,11 +189,9 @@
 
     /* RESPONSIVE */
     @media (max-width: 1100px) {
-      .format-grid { grid-template-columns: 1fr; }
       .cta-inner { flex-direction: column; align-items: flex-start; gap: 32px; }
-      .inhouse-cta { flex-direction: column; align-items: flex-start; gap: 20px; }
-      .training-table .td-topic,
-      .training-table .td-format { display: none; }
+      .t-detail-body .t-grid { grid-template-columns: 1fr; }
+      .t-detail-dates { display: none; }
     }
     @media (max-width: 800px) {
       .wrap { padding: 0 20px; }
@@ -193,12 +199,13 @@
       .nav-links, .nav-act .btn-outline { display: none; }
       .hbg { display: flex; }
       .sec { padding: 56px 0; }
-      .sec-sm { padding: 40px 0; }
       .page-hero-in { padding: 48px 0 56px; }
       .fi-w { flex-direction: column; gap: 10px; text-align: center; }
-      .training-table td { padding: 12px 10px; }
-      .training-table .td-termin { display: none; }
+      .t-detail-left { flex-direction: column; align-items: flex-start; gap: 4px; }
+      .t-detail-code { width: auto; }
+      .t-detail-right { gap: 10px; }
       .sh { flex-direction: column; gap: 4px; }
+      .training-table td { padding: 12px 10px; font-size: .82rem; }
     }
   </style>
 </head>
@@ -212,34 +219,18 @@
       <span class="nav-logo-s">Hanschke Consulting</span>
     </a>
     <ul class="nav-links">
-      <li class="nav-item nav-drop">
-        <a href="../leistungen/">Beratung <span class="nav-caret"></span></a>
-        <div class="drop-menu">
-          <a href="../leistungen/strategisches-it-management/">Strategisches IT-Management</a>
-          <a href="../leistungen/it-management/">IT-Management</a>
-          <a href="../leistungen/eam/">Enterprise Architecture Management</a>
-          <a href="../leistungen/ki-data/">KI &amp; Data</a>
-          <a href="../leistungen/lean-value-management/">Lean Value Management</a>
-          <a href="../leistungen/informationssicherheit/">Informationssicherheit</a>
-        </div>
-      </li>
-      <li class="nav-item nav-drop">
-        <a href="../trainings/">Schulungen <span class="nav-caret"></span></a>
-        <div class="drop-menu">
-          <a href="../trainings/schulungen/">Schulungen</a>
-          <a href="../trainings/webinare/">Webinare</a>
-        </div>
-      </li>
-      <li><a href="../ueber-inge/">Über mich</a></li>
-      <li><a href="../buecher/">Bücher</a></li>
+      <li><a href="../leistungen/">Beratung</a></li>
+      <li><a href="../ueber-inge/">Uber mich</a></li>
+      <li><a href="#" class="active">Schulungen</a></li>
+      <li><a href="../buecher/">Bucher</a></li>
       <li><a href="../partner/">Partner</a></li>
       <li><a href="../events/">Events</a></li>
     </ul>
     <div class="nav-act">
       <a href="../events/" class="btn btn-outline" style="padding:8px 16px;font-size:12.5px;">Termine</a>
-      <a href="../#kontakt" class="btn btn-primary" style="padding:8px 16px;font-size:12.5px;">Kontakt</a>
+      <a href="../kontakt/" class="btn btn-primary" style="padding:8px 16px;font-size:12.5px;">Kontakt</a>
     </div>
-    <button class="hbg" id="hbgBtn" onclick="toggleMenu()" aria-label="Menü">
+    <button class="hbg" id="hbgBtn" onclick="toggleMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -247,17 +238,9 @@
 
 <div class="mmenu" id="mmenu">
   <a href="../leistungen/" onclick="closeMenu()">Beratung</a>
-  <a href="../leistungen/strategisches-it-management/" onclick="closeMenu()" class="mmenu-sub">Strategisches IT-Management</a>
-  <a href="../leistungen/it-management/" onclick="closeMenu()" class="mmenu-sub">IT-Management</a>
-  <a href="../leistungen/eam/" onclick="closeMenu()" class="mmenu-sub">Enterprise Architecture Management</a>
-  <a href="../leistungen/ki-data/" onclick="closeMenu()" class="mmenu-sub">KI &amp; Data</a>
-  <a href="../leistungen/lean-value-management/" onclick="closeMenu()" class="mmenu-sub">Lean Value Management</a>
-  <a href="../leistungen/informationssicherheit/" onclick="closeMenu()" class="mmenu-sub">Informationssicherheit</a>
-  <a href="../trainings/" onclick="closeMenu()">Schulungen</a>
-  <a href="../trainings/schulungen/" onclick="closeMenu()" class="mmenu-sub">Schulungen</a>
-  <a href="../trainings/webinare/" onclick="closeMenu()" class="mmenu-sub">Webinare</a>
-  <a href="../ueber-inge/" onclick="closeMenu()">Über mich</a>
-  <a href="../buecher/" onclick="closeMenu()">Bücher</a>
+  <a href="../ueber-inge/" onclick="closeMenu()">Uber mich</a>
+  <a href="#" onclick="closeMenu()">Schulungen</a>
+  <a href="../buecher/" onclick="closeMenu()">Bucher</a>
   <a href="../partner/" onclick="closeMenu()">Partner</a>
   <a href="../events/" onclick="closeMenu()">Events</a>
   <a href="../kontakt/" class="btn btn-primary" onclick="closeMenu()">Kontakt aufnehmen</a>
@@ -269,96 +252,19 @@
     <div class="page-hero-in">
       <div class="page-hero-bc">
         <a href="../">Startseite</a>
-        <span>›</span>
-        <span style="color:var(--black);">Trainings</span>
+        <span style="color:var(--g200);">›</span>
+        <span style="color:var(--black);">Schulungen</span>
       </div>
-      <span class="ey">Webinare &amp; Schulungen</span>
-      <h1 style="margin-top:18px;max-width:720px;">Wissen, das<br><em class="r">wirkt.</em></h1>
+      <span class="ey">Schulungsprogramm 2026/2027</span>
+      <h1 style="margin-top:18px;max-width:720px;">Praxiswissen.<br><em class="r">Direkt anwendbar.</em></h1>
       <p class="lead" style="margin-top:20px;max-width:620px;">
-        Zwei Formate — ein Anspruch: direkt anwendbar, ohne theoretischen Overhead.
-        Kostenlose Freitags-Webinare zum Einstieg,
-        2-tägige Schulungen für die Vertiefung.
-        Alle Inhalte basieren auf 35+ Jahren IT-Praxis.
+        Praxisorientierte 2-tagige Schulungen — direkt in die Blocke reinspringen.
+        Anmeldemoglichkeit direkt bei jeder Schulung. Alle Schulungen basieren auf 35+ Jahren IT-Praxis
+        und den Hanschke-Consulting Best-Practices.
       </p>
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:28px;">
-        <a href="#webinare" class="btn btn-primary">Webinare ansehen</a>
-        <a href="#schulungen" class="btn btn-outline">Schulungen ansehen</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FORMAT COMPARE -->
-<section id="formate">
-  <div class="wrap" style="padding-top:0;padding-bottom:0;">
-    <div class="format-grid">
-      <div class="format-card highlight">
-        <div class="fc-type free">Kostenlos</div>
-        <h3>Webinare</h3>
-        <div class="fc-attrs">
-          <div class="fc-attr">
-            <span class="fc-attr-label">Dauer</span>
-            <span class="fc-attr-val"><strong>30–60 Minuten</strong></span>
-          </div>
-          <div class="fc-attr">
-            <span class="fc-attr-label">Rhythmus</span>
-            <span class="fc-attr-val"><strong>Freitags</strong> · auf Anfrage</span>
-          </div>
-          <div class="fc-attr">
-            <span class="fc-attr-label">Format</span>
-            <span class="fc-attr-val">Online · unbegrenzte Teilnehmer</span>
-          </div>
-          <div class="fc-attr">
-            <span class="fc-attr-label">Kosten</span>
-            <span class="fc-attr-val" style="color:var(--red);font-weight:700;">Kostenlos</span>
-          </div>
-          <div class="fc-attr">
-            <span class="fc-attr-label">Ziel</span>
-            <span class="fc-attr-val">Einstieg, Überblick, Orientierung — bevor Sie investieren</span>
-          </div>
-        </div>
-        <div class="fc-codes">
-          <span class="fc-code free">BPEAM</span>
-          <span class="fc-code free">DIG</span>
-          <span class="fc-code free">LDM</span>
-          <span class="fc-code free">AGILE</span>
-          <span class="fc-code free">ISMS</span>
-        </div>
-      </div>
-      <div class="format-card">
-        <div class="fc-type paid">Kostenpflichtig</div>
-        <h3>Schulungen</h3>
-        <div class="fc-attrs">
-          <div class="fc-attr">
-            <span class="fc-attr-label">Dauer</span>
-            <span class="fc-attr-val"><strong>2 Tage</strong></span>
-          </div>
-          <div class="fc-attr">
-            <span class="fc-attr-label">Termin</span>
-            <span class="fc-attr-val"><strong>Auf Anfrage</strong> · Präsenz oder Online</span>
-          </div>
-          <div class="fc-attr">
-            <span class="fc-attr-label">Format</span>
-            <span class="fc-attr-val">Offen oder Inhouse für Ihr Team</span>
-          </div>
-          <div class="fc-attr">
-            <span class="fc-attr-label">Kosten</span>
-            <span class="fc-attr-val">Auf Anfrage · Inhouse-Pauschalpreis möglich</span>
-          </div>
-          <div class="fc-attr">
-            <span class="fc-attr-label">Ziel</span>
-            <span class="fc-attr-val">Methodik lernen, direkt im Unternehmen anwenden</span>
-          </div>
-        </div>
-        <div class="fc-codes">
-          <span class="fc-code paid">EAM1</span>
-          <span class="fc-code paid">EAM2</span>
-          <span class="fc-code paid">STRAT</span>
-          <span class="fc-code paid">BADM</span>
-          <span class="fc-code paid">ITMGMT</span>
-          <span class="fc-code paid">ISMS</span>
-          <span class="fc-code paid">ZBR</span>
-        </div>
+        <a href="#sitm" class="btn btn-primary">Schulungen ansehen</a>
+        <a href="#persoenlich" class="btn btn-outline">Personliche Kompetenz</a>
       </div>
     </div>
   </div>
@@ -368,276 +274,1046 @@
 <nav id="anav">
   <div class="wrap">
     <div class="anav-in">
-      <a href="#webinare" class="anav-link act">Webinare</a>
-      <a href="#schulungen" class="anav-link">Schulungen</a>
-      <a href="#inhouse" class="anav-link">Inhouse-Buchung</a>
+      <a href="#sitm" class="anav-link act">SITM</a>
+      <a href="#itm" class="anav-link">ITM</a>
+      <a href="#eam" class="anav-link">EAM</a>
+      <a href="#kidata" class="anav-link">KI &amp; Data</a>
+      <a href="#lvm" class="anav-link">LVM</a>
+      <a href="#persoenlich" class="anav-link" style="border-left:2px solid var(--blue);margin-left:12px;padding-left:20px;">Personliche Kompetenz</a>
+      <a href="#fuehrung" class="anav-link">Fuhrungskompetenz</a>
     </div>
   </div>
 </nav>
 
-<!-- WEBINARE -->
-<section id="webinare" class="sec">
+<!-- QUICK OVERVIEW TABLE -->
+<section class="sec-sm" style="background:var(--black);border-top:3px solid var(--red);">
   <div class="wrap">
-    <div class="sh">
-      <div>
-        <h2>Webinare</h2>
-        <p style="font-size:.9rem;color:var(--g600);margin-top:6px;max-width:560px;">Kostenlos, freitags, 30–60 Minuten. Termine auf Anfrage — Rückmeldung innerhalb 24 Stunden.</p>
-      </div>
-      <span class="sh-count">5 Webinare</span>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;">
+      <span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red);">Alle Schulungen im Uberblick</span>
+      <span style="font-size:12px;color:rgba(255,255,255,.3);">Preis pro Person: 1.970 EUR · 2 Tage · Deutsch</span>
     </div>
-
-    <table class="training-table">
+    <table class="training-table" style="border-color:rgba(255,255,255,.1);">
       <thead>
         <tr>
-          <th style="width:80px;">Code</th>
-          <th>Webinar</th>
-          <th class="td-topic" style="width:220px;">Thema / Leistungsblock</th>
-          <th style="width:130px;">Nächster Termin</th>
-          <th class="td-format" style="width:100px;">Format</th>
-          <th style="width:90px;">Kosten</th>
-          <th style="width:140px;">Anmeldung</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><span class="td-code webinar">BPEAM</span></td>
-          <td>
-            <div class="td-name">Best-Practice EAM</div>
-            <div class="td-topic">Enterprise Architecture Management einfach &amp; effektiv</div>
-          </td>
-          <td class="td-topic"><span style="font-size:.82rem;color:var(--g600);">Enterprise Architecture Management</span></td>
-          <td class="td-termin">Auf Anfrage</td>
-          <td class="td-format">Online</td>
-          <td><span class="td-free">Kostenlos</span></td>
-          <td class="td-link">
-            <a href="../#kontakt" class="btn btn-dark" style="font-size:11.5px;padding:7px 14px;">Termin anfragen</a>
-          </td>
-        </tr>
-        <tr>
-          <td><span class="td-code webinar">DIG</span></td>
-          <td>
-            <div class="td-name">Wirksame Digitale Transformation</div>
-            <div class="td-topic">Methodik, Stolperfallen, Erfolgsfaktoren</div>
-          </td>
-          <td class="td-topic"><span style="font-size:.82rem;color:var(--g600);">Strategisches IT-Management</span></td>
-          <td class="td-termin">Auf Anfrage</td>
-          <td class="td-format">Online</td>
-          <td><span class="td-free">Kostenlos</span></td>
-          <td class="td-link">
-            <a href="../#kontakt" class="btn btn-dark" style="font-size:11.5px;padding:7px 14px;">Termin anfragen</a>
-          </td>
-        </tr>
-        <tr>
-          <td><span class="td-code webinar">LDM</span></td>
-          <td>
-            <div class="td-name">Lean Datenmanagement</div>
-            <div class="td-topic">Datenstrategie, Datenarchitektur &amp; KI-Readiness</div>
-          </td>
-          <td class="td-topic"><span style="font-size:.82rem;color:var(--g600);">KI &amp; Data</span></td>
-          <td class="td-termin">Auf Anfrage</td>
-          <td class="td-format">Online</td>
-          <td><span class="td-free">Kostenlos</span></td>
-          <td class="td-link">
-            <a href="../#kontakt" class="btn btn-dark" style="font-size:11.5px;padding:7px 14px;">Termin anfragen</a>
-          </td>
-        </tr>
-        <tr>
-          <td><span class="td-code webinar">AGILE</span></td>
-          <td>
-            <div class="td-name">Agiles IT-Management in der Praxis</div>
-            <div class="td-topic">Lean &amp; Agile, Sustainable Quick-wins</div>
-          </td>
-          <td class="td-topic"><span style="font-size:.82rem;color:var(--g600);">Lean Value Management</span></td>
-          <td class="td-termin">Auf Anfrage</td>
-          <td class="td-format">Online</td>
-          <td><span class="td-free">Kostenlos</span></td>
-          <td class="td-link">
-            <a href="../#kontakt" class="btn btn-dark" style="font-size:11.5px;padding:7px 14px;">Termin anfragen</a>
-          </td>
-        </tr>
-        <tr>
-          <td><span class="td-code webinar">ISMS</span></td>
-          <td>
-            <div class="td-name">Informationssicherheit &amp; Datenschutz</div>
-            <div class="td-topic">Einführung: ISMS, ISO 27001, DSGVO, NIS-2</div>
-          </td>
-          <td class="td-topic"><span style="font-size:.82rem;color:var(--g600);">Informationssicherheit</span></td>
-          <td class="td-termin">Auf Anfrage</td>
-          <td class="td-format">Online</td>
-          <td><span class="td-free">Kostenlos</span></td>
-          <td class="td-link">
-            <a href="../#kontakt" class="btn btn-dark" style="font-size:11.5px;padding:7px 14px;">Termin anfragen</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p style="font-size:.85rem;color:var(--g400);margin-top:14px;">
-      Alle Webinare freitags, 30–60 Min., kostenlos. Termine werden nach Anfrage abgestimmt.
-      <a href="../events/" style="color:var(--black);text-decoration:underline;text-underline-offset:3px;">Alle Events ansehen</a>
-    </p>
-  </div>
-</section>
-
-<!-- SCHULUNGEN -->
-<section id="schulungen" class="sec">
-  <div class="wrap">
-    <div class="sh">
-      <div>
-        <h2>Schulungen</h2>
-        <p style="font-size:.9rem;color:var(--g600);margin-top:6px;max-width:560px;">2 Tage · Präsenz oder Online · Termin auf Anfrage. Offen oder als Inhouse-Format für Ihr Team.</p>
-      </div>
-      <span class="sh-count">7 Schulungen</span>
-    </div>
-
-    <table class="training-table">
-      <thead>
-        <tr>
-          <th style="width:80px;">Code</th>
+          <th style="width:70px;">Kurzel</th>
           <th>Schulung</th>
-          <th class="td-topic" style="width:200px;">Leistungsblock</th>
-          <th style="width:130px;">Nächster Termin</th>
-          <th class="td-format" style="width:120px;">Zielgruppe</th>
-          <th style="width:110px;">Format</th>
-          <th style="width:140px;">Anmeldung</th>
+          <th style="width:180px;">Kurzbeschreibung</th>
+          <th style="width:220px;">Termine</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td><span class="td-code schulung">EAM1</span></td>
-          <td>
-            <div class="td-name">Enterprise Architecture Management — Grundlagen</div>
-            <div class="td-topic">Einstieg in EAM: Konzepte, Methoden, Werkzeuge</div>
-          </td>
-          <td class="td-topic"><span style="font-size:.82rem;color:var(--g600);">EAM</span></td>
-          <td class="td-termin">Auf Anfrage</td>
-          <td class="td-format" style="font-size:.82rem;color:var(--g600);">IT-Architekten · Einsteiger</td>
-          <td><span style="font-size:.82rem;color:var(--g600);">2 Tage</span></td>
-          <td class="td-link">
-            <a href="../leistungen/eam/" class="td-detail">Details</a>
-            <a href="../#kontakt" class="btn btn-primary" style="font-size:11.5px;padding:7px 14px;margin-top:6px;display:inline-flex;">Anmelden</a>
-          </td>
+      <tbody style="color:var(--white);">
+        <tr style="border-color:rgba(255,255,255,.07);">
+          <td><span class="td-code red">SIM</span></td>
+          <td><a href="#sim" style="color:var(--white);"><div class="td-name" style="color:var(--white);">Strategisches IT-Management</div></a></td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.5);">Strategische IT-Planung mit IT-Strategie und deren Operationalisierung</td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.5);">18.–19.06.26 · 07.–08.10.26</td>
         </tr>
-        <tr>
-          <td><span class="td-code schulung">EAM2</span></td>
-          <td>
-            <div class="td-name">Enterprise Architecture Management — Vertiefung</div>
-            <div class="td-topic">EAM-Nutzen erhöhen: Governance, Tools, KI-Transformation</div>
-          </td>
-          <td class="td-topic"><span style="font-size:.82rem;color:var(--g600);">EAM</span></td>
-          <td class="td-termin">Auf Anfrage</td>
-          <td class="td-format" style="font-size:.82rem;color:var(--g600);">EAM-Praktiker</td>
-          <td><span style="font-size:.82rem;color:var(--g600);">2 Tage</span></td>
-          <td class="td-link">
-            <a href="../leistungen/eam/" class="td-detail">Details</a>
-            <a href="../#kontakt" class="btn btn-primary" style="font-size:11.5px;padding:7px 14px;margin-top:6px;display:inline-flex;">Anmelden</a>
-          </td>
+        <tr style="border-color:rgba(255,255,255,.07);">
+          <td><span class="td-code red">SIP</span></td>
+          <td><a href="#sip" style="color:var(--white);"><div class="td-name" style="color:var(--white);">Zielbild-Gestaltung und Roadmapping</div></a></td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.5);">Strategische IT-Planung, Ziel-Bild &amp; Roadmap</td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.5);">23.–24.09.26 · 01.–02.03.27</td>
         </tr>
-        <tr>
-          <td><span class="td-code schulung">STRAT</span></td>
-          <td>
-            <div class="td-name">Zukunft gestalten — Strategisches IT-Management</div>
-            <div class="td-topic">IT-Strategie, Ziel-Bild &amp; Roadmapping, Lean Innovation</div>
-          </td>
-          <td class="td-topic"><span style="font-size:.82rem;color:var(--g600);">Strategisches IT-Management</span></td>
-          <td class="td-termin">Auf Anfrage</td>
-          <td class="td-format" style="font-size:.82rem;color:var(--g600);">IT-Leiter · CIOs</td>
-          <td><span style="font-size:.82rem;color:var(--g600);">2 Tage</span></td>
-          <td class="td-link">
-            <a href="../leistungen/strategisches-it-management/" class="td-detail">Details</a>
-            <a href="../#kontakt" class="btn btn-primary" style="font-size:11.5px;padding:7px 14px;margin-top:6px;display:inline-flex;">Anmelden</a>
-          </td>
+        <tr style="border-color:rgba(255,255,255,.07);">
+          <td><span class="td-code red">LITM</span></td>
+          <td><a href="#litm" style="color:var(--white);"><div class="td-name" style="color:var(--white);">Wirksames Lean IT-Instrumentarium</div></a></td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.5);">Operational &amp; Strategic Excellence</td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.5);">21.–22.09.26 · 03.–04.03.27</td>
         </tr>
-        <tr>
-          <td><span class="td-code schulung">BADM</span></td>
-          <td>
-            <div class="td-name">Business-Analyse &amp; Demand Management</div>
-            <div class="td-topic">BA4D-Methodik, Demand-to-Value, Lean Portfolio</div>
-          </td>
-          <td class="td-topic"><span style="font-size:.82rem;color:var(--g600);">Lean Value Management</span></td>
-          <td class="td-termin">Auf Anfrage</td>
-          <td class="td-format" style="font-size:.82rem;color:var(--g600);">Business-Analysten · PO</td>
-          <td><span style="font-size:.82rem;color:var(--g600);">2 Tage</span></td>
-          <td class="td-link">
-            <a href="../leistungen/lean-value-management/" class="td-detail">Details</a>
-            <a href="../#kontakt" class="btn btn-primary" style="font-size:11.5px;padding:7px 14px;margin-top:6px;display:inline-flex;">Anmelden</a>
-          </td>
+        <tr style="border-color:rgba(255,255,255,.07);">
+          <td><span class="td-code red">EFF</span></td>
+          <td><a href="#eff" style="color:var(--white);"><div class="td-name" style="color:var(--white);">Effizientes Management einer kleinen oder grossen IT</div></a></td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.5);">Hands-on Best-Practices fur IT-Management</td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.5);">Folgt in Kurze</td>
         </tr>
-        <tr>
-          <td><span class="td-code schulung">ITMGMT</span></td>
-          <td>
-            <div class="td-name">Lean IT-Management — Effizienz &amp; Organisation</div>
-            <div class="td-topic">IT-Governance, ITSM, Application Management, Lean Checkup</div>
-          </td>
-          <td class="td-topic"><span style="font-size:.82rem;color:var(--g600);">IT-Management</span></td>
-          <td class="td-termin">Auf Anfrage</td>
-          <td class="td-format" style="font-size:.82rem;color:var(--g600);">IT-Manager · IT-Leiter</td>
-          <td><span style="font-size:.82rem;color:var(--g600);">2 Tage</span></td>
-          <td class="td-link">
-            <a href="../leistungen/it-management/" class="td-detail">Details</a>
-            <a href="../#kontakt" class="btn btn-primary" style="font-size:11.5px;padding:7px 14px;margin-top:6px;display:inline-flex;">Anmelden</a>
-          </td>
+        <tr style="border-color:rgba(255,255,255,.07);">
+          <td><span class="td-code red">EAM1</span></td>
+          <td><a href="#eam1" style="color:var(--white);"><div class="td-name" style="color:var(--white);">Einstieg in EAM</div></a></td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.5);">Erste Schritte &amp; Best-Practice-EAM im Uberblick</td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.5);">11.–12.06.26 · 10.–11.09.26</td>
         </tr>
-        <tr>
-          <td><span class="td-code schulung">ISMS</span></td>
-          <td>
-            <div class="td-name">Informationssicherheits-Management</div>
-            <div class="td-topic">ISMS, ISO 27001, DSGVO, NIS-2 — einfach &amp; effektiv</div>
-          </td>
-          <td class="td-topic"><span style="font-size:.82rem;color:var(--g600);">Informationssicherheit</span></td>
-          <td class="td-termin">Auf Anfrage</td>
-          <td class="td-format" style="font-size:.82rem;color:var(--g600);">CISO · IT-SB · Datenschutz</td>
-          <td><span style="font-size:.82rem;color:var(--g600);">2 Tage</span></td>
-          <td class="td-link">
-            <a href="../leistungen/informationssicherheit/" class="td-detail">Details</a>
-            <a href="../#kontakt" class="btn btn-primary" style="font-size:11.5px;padding:7px 14px;margin-top:6px;display:inline-flex;">Anmelden</a>
-          </td>
+        <tr style="border-color:rgba(255,255,255,.07);">
+          <td><span class="td-code red">EAM2</span></td>
+          <td><a href="#eam2" style="color:var(--white);"><div class="td-name" style="color:var(--white);">EAM-Nutzen erhohen</div></a></td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.5);">Ausbau &amp; Verankerung von EAM</td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.5);">16.–17.04.26 · 22.–23.07.26 · 03.–04.02.27</td>
         </tr>
-        <tr>
-          <td><span class="td-code schulung">ZBR</span></td>
-          <td>
-            <div class="td-name">Zielorientiertes Business Requirements Management</div>
-            <div class="td-topic">Lean Requirements Engineering für Projekte &amp; Produkte</div>
-          </td>
-          <td class="td-topic"><span style="font-size:.82rem;color:var(--g600);">Business-Analyse</span></td>
-          <td class="td-termin">Auf Anfrage</td>
-          <td class="td-format" style="font-size:.82rem;color:var(--g600);">BA · Projektleiter</td>
-          <td><span style="font-size:.82rem;color:var(--g600);">2 Tage</span></td>
-          <td class="td-link">
-            <a href="../leistungen/strategisches-it-management/" class="td-detail">Details</a>
-            <a href="../#kontakt" class="btn btn-primary" style="font-size:11.5px;padding:7px 14px;margin-top:6px;display:inline-flex;">Anmelden</a>
-          </td>
+        <tr style="border-color:rgba(255,255,255,.07);">
+          <td><span class="td-code red">BA4D</span></td>
+          <td><a href="#ba4d" style="color:var(--white);"><div class="td-name" style="color:var(--white);">Business Architecture 4 Digitalization</div></a></td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.5);">Nutzen aus Geschaftsarchitektur ziehen</td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.5);">23.–24.09.26 · 03.–04.03.27</td>
+        </tr>
+        <tr style="border-color:rgba(255,255,255,.07);">
+          <td><span class="td-code red">KI, BI &amp; Data</span></td>
+          <td><a href="#kibidata" style="color:var(--white);"><div class="td-name" style="color:var(--white);">KI-, BI- &amp; Datenmanagement</div></a></td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.5);">KI &amp; Data — der Schlussel fur den Erfolg</td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.5);">21.–22.10.26 · 03.–04.02.27</td>
+        </tr>
+        <tr style="border-color:rgba(255,255,255,.07);">
+          <td><span class="td-code red">BA I &amp; II</span></td>
+          <td><a href="#ba12" style="color:var(--white);"><div class="td-name" style="color:var(--white);">Lean Demand Management &amp; Business-Analyse</div></a></td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.5);">Anforderungen ermitteln, dokumentieren, bewerten</td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.5);">08.–09.07.26 · 21.–22.10.26</td>
+        </tr>
+        <tr style="border-color:rgba(255,255,255,.07);">
+          <td><span class="td-code red">LPM</span></td>
+          <td><a href="#lpm" style="color:var(--white);"><div class="td-name" style="color:var(--white);">Lean / IT-Portfoliomanagement</div></a></td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.5);">KI &amp; Lean fur wirksames IT-Portfoliomanagement</td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.5);">05.–06.08.26 · 09.–10.12.26</td>
+        </tr>
+        <tr style="border-color:rgba(255,255,255,.07);background:rgba(37,99,235,.08);">
+          <td><span class="td-code blue">RMS</span></td>
+          <td><div class="td-name" style="color:rgba(255,255,255,.8);">Resilienz &amp; Mentale Starke</div></td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.4);">Personliche Kompetenz</td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.4);">21.–22.10.26</td>
+        </tr>
+        <tr style="border-color:rgba(255,255,255,.07);background:rgba(37,99,235,.08);">
+          <td><span class="td-code blue">KOM</span></td>
+          <td><div class="td-name" style="color:rgba(255,255,255,.8);">Kommunikation</div></td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.4);">Personliche Kompetenz</td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.4);">Folgt in Kurze</td>
+        </tr>
+        <tr style="border-color:rgba(255,255,255,.07);background:rgba(37,99,235,.08);">
+          <td><span class="td-code blue">LEAD</span></td>
+          <td><div class="td-name" style="color:rgba(255,255,255,.8);">Leadership-Journey</div></td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.4);">Fuhrungskompetenz</td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.4);">Folgt in Kurze</td>
+        </tr>
+        <tr style="border-color:rgba(255,255,255,.07);background:rgba(37,99,235,.08);">
+          <td><span class="td-code blue">MOD</span></td>
+          <td><div class="td-name" style="color:rgba(255,255,255,.8);">Moderation</div></td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.4);">Fuhrungskompetenz</td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.4);">Folgt in Kurze</td>
+        </tr>
+        <tr style="border-color:rgba(255,255,255,.07);background:rgba(37,99,235,.08);">
+          <td><span class="td-code blue">TOOLS</span></td>
+          <td><div class="td-name" style="color:rgba(255,255,255,.8);">IT-Management Methoden- &amp; Tool-Box</div></td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.4);">Fuhrungskompetenz</td>
+          <td style="font-size:.82rem;color:rgba(255,255,255,.4);">Folgt in Kurze</td>
         </tr>
       </tbody>
     </table>
-
-    <p style="font-size:.85rem;color:var(--g400);margin-top:14px;">
-      Details zu den Schulungsinhalten finden Sie auf den jeweiligen Leistungsseiten.
-      Alle Schulungen auch als Inhouse-Format buchbar.
-    </p>
   </div>
 </section>
 
-<!-- INHOUSE -->
-<section id="inhouse" class="sec-sm" style="background:var(--white);border-top:1px solid var(--g200);">
+
+<!-- ===== BLOCK 1: STRATEGISCHES IT-MANAGEMENT ===== -->
+<section id="sitm" class="sec" style="background:var(--white);">
   <div class="wrap">
-    <div class="inhouse-cta" style="background:var(--black);border:none;">
+    <div class="sh">
       <div>
-        <span style="font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);display:block;margin-bottom:10px;">Inhouse-Schulung</span>
-        <h3 style="color:var(--white);font-size:1.15rem;margin-bottom:10px;">Schulung direkt bei Ihnen im Unternehmen.</h3>
-        <p style="color:rgba(255,255,255,.45);font-size:.88rem;line-height:1.68;max-width:520px;">
-          Alle Schulungen sind als Inhouse-Format buchbar — für Ihr Team, in Ihren Räumen oder online.
-          Themen-Kombination möglich. Termin flexibel. Rückmeldung innerhalb 24 Stunden.
-        </p>
+        <span class="ey">Strategisches IT-Management (SITM)</span>
+        <h2 style="margin-top:10px;">Zukunft gestalten</h2>
       </div>
-      <div class="inhouse-acts">
-        <a href="../#kontakt" class="btn btn-primary">
-          Inhouse-Schulung anfragen
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <a href="../events/" class="btn btn-outline-w">Alle Termine</a>
+      <span class="sh-count">2 Schulungen</span>
+    </div>
+
+    <!-- SIM -->
+    <div class="t-detail" id="sim">
+      <div class="t-detail-head" onclick="toggleDetail(this)">
+        <div class="t-detail-left">
+          <span class="t-detail-code">SIM</span>
+          <div class="t-detail-info">
+            <h3>Strategisches IT-Management</h3>
+            <p class="t-detail-tagline">Strategische IT-Planung mit IT-Strategie und deren Operationalisierung &amp; Verankerung</p>
+          </div>
+        </div>
+        <div class="t-detail-right">
+          <div class="t-detail-dates">
+            <strong>18.–19.06.26</strong>
+            07.–08.10.26
+          </div>
+          <a href="../kontakt/" class="btn btn-primary" style="padding:8px 16px;font-size:12px;" onclick="event.stopPropagation();">Anmelden</a>
+          <div class="t-detail-toggle">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="#666" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="t-detail-body">
+        <div class="t-grid">
+          <div class="t-content">
+            <h4>Schulungsziel: Ausrichtung &amp; Leitplanken vorgeben</h4>
+            <p>Die fortschreitende Durchdringung von KI &amp; Digitalisierung verandert Geschaftsmodelle in beispielloser Geschwindigkeit. Die IT muss strategisch und am Business ausgerichtet, Innovationen systematisch managen und auf Veranderungen vorbereitet werden, um den Wertbeitrag der IT signifikant zu erhohen.</p>
+            <ul>
+              <li>IT-Strategie aus der Unternehmensstrategie ableiten und pragnant dokumentieren</li>
+              <li>Vision, Ziel-Bild und Leitplanken gestalten</li>
+              <li>Passgenaues und handhabbares IT-Instrumentarium</li>
+              <li>Verankerung in der Organisation</li>
+            </ul>
+            <h4>Inhalte</h4>
+            <ul>
+              <li>Was ist ein wirksames strategisches IT-Management?</li>
+              <li>Unterschied zwischen strategischem und operativem IT-Management</li>
+              <li>IT-Strategie: Inhalte, Vorlage Strategiedokument, Leitfaden Strategieentwicklung</li>
+              <li>Business- und IT-Ziele mit u.a. OKR</li>
+              <li>Business-IT-Alignment in der Praxis</li>
+              <li>Leitplanken und Rahmenvorgaben: Relevante Leitplanken, Dokumentation und Operationalisierung</li>
+              <li>Ziel-Bild &amp; Roadmapping — von der IT-Strategie bis zum Masterplan</li>
+              <li>Lean / IT-Portfoliomanagement: IT-Investitionen und Ressourcen steuern</li>
+              <li>IT-Instrumentarium: Instrumente fur ein handhabbares und wirksames IT-Management, KI-Unterstutzung</li>
+              <li>Verankerung in der Organisation: Organisation, Prozesse, Gremien</li>
+            </ul>
+          </div>
+          <div class="t-sidebar">
+            <div class="t-meta-row"><span class="t-meta-label">Trainerin</span><span class="t-meta-val">Inge Hanschke</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Dauer</span><span class="t-meta-val">2 Tage</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Sprache</span><span class="t-meta-val">Deutsch</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Level</span><span class="t-meta-val">Einsteiger / Fortgeschritten</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Zielgruppe</span><span class="t-meta-val">IT-Manager, IT-Strategen, Unternehmensarchitekten</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Preis</span><span class="t-meta-val" style="color:var(--red);font-size:1.1rem;">1.970 EUR</span></div>
+            <div class="t-dates-list">
+              <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--g400);margin-bottom:8px;">Termine</div>
+              <div class="t-date-item">
+                <span class="t-date-val">18.–19. Juni 2026</span>
+                <a href="../kontakt/" class="btn btn-primary" style="padding:6px 14px;font-size:11px;">Anmelden</a>
+              </div>
+              <div class="t-date-item">
+                <span class="t-date-val">07.–08. Oktober 2026</span>
+                <a href="../kontakt/" class="btn btn-primary" style="padding:6px 14px;font-size:11px;">Anmelden</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
+    <!-- SIP -->
+    <div class="t-detail" id="sip">
+      <div class="t-detail-head" onclick="toggleDetail(this)">
+        <div class="t-detail-left">
+          <span class="t-detail-code">SIP</span>
+          <div class="t-detail-info">
+            <h3>Zielbild-Gestaltung und Roadmapping</h3>
+            <p class="t-detail-tagline">Strategische IT-Planung, Gestaltung von Ziel-Bild &amp; Roadmap auf Basis Ihrer Geschaftsarchitektur</p>
+          </div>
+        </div>
+        <div class="t-detail-right">
+          <div class="t-detail-dates">
+            <strong>23.–24.09.26</strong>
+            01.–02.03.27
+          </div>
+          <a href="../kontakt/" class="btn btn-primary" style="padding:8px 16px;font-size:12px;" onclick="event.stopPropagation();">Anmelden</a>
+          <div class="t-detail-toggle">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="#666" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="t-detail-body">
+        <div class="t-grid">
+          <div class="t-content">
+            <h4>Schulungsziel: Strategie operationalisieren</h4>
+            <p>Eine Strategie ohne Operationalisierung ist nicht umsetzbar. Nutzen Sie fur die Operationalisierung gemeinsam mit den Fachexperten erstellte Ziel-Bilder, Roadmaps und Masterplane.</p>
+            <ul>
+              <li>Strategische IT-Planung ganzheitlich verstehen und einordnen</li>
+              <li>Fachliches Ziel-Bild im Zusammenspiel mit Business Capabilities &amp; BA4D</li>
+              <li>Methoden fur systematische und handhabbare Ziel-Bild-Gestaltung, Roadmapping und Lean Portfoliomanagement</li>
+            </ul>
+            <h4>Inhalte</h4>
+            <ul>
+              <li>Strategische IT-Planung: Ergebnisse, Planungsebenen und Granularitaten</li>
+              <li>Ziel-Bild und Roadmap im Detail: Fachliches Ziel-Bild, IT-Ziel-Bild</li>
+              <li>Business Capability Map als fachliches Ziel-Bild: Vorgehen zur Ableitung</li>
+              <li>Business Architecture 4 Digitalization (BA4D) im Uberblick</li>
+              <li>Leitplanken im Detail: Prinzipien, Strategien, technische Standardisierung</li>
+              <li>IT-Strategie: Inhalte, Strategiedokument, Leitfaden zur Ableitung</li>
+              <li>Methode zur Gestaltung Ihres Ziel-Bilds und Roadmap</li>
+              <li>Zusammenspiel mit dem Lean / IT-Portfoliomanagement</li>
+            </ul>
+          </div>
+          <div class="t-sidebar">
+            <div class="t-meta-row"><span class="t-meta-label">Trainerin</span><span class="t-meta-val">Inge Hanschke</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Dauer</span><span class="t-meta-val">2 Tage</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Sprache</span><span class="t-meta-val">Deutsch</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Level</span><span class="t-meta-val">Fortgeschritten</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Zielgruppe</span><span class="t-meta-val">Strategen, Unternehmensarchitekten, Business &amp; IT</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Preis</span><span class="t-meta-val" style="color:var(--red);font-size:1.1rem;">1.970 EUR</span></div>
+            <div class="t-dates-list">
+              <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--g400);margin-bottom:8px;">Termine</div>
+              <div class="t-date-item">
+                <span class="t-date-val">23.–24. September 2026</span>
+                <a href="../kontakt/" class="btn btn-primary" style="padding:6px 14px;font-size:11px;">Anmelden</a>
+              </div>
+              <div class="t-date-item">
+                <span class="t-date-val">01.–02. Marz 2027</span>
+                <a href="../kontakt/" class="btn btn-primary" style="padding:6px 14px;font-size:11px;">Anmelden</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== BLOCK 2: IT-MANAGEMENT ===== -->
+<section id="itm" class="sec" style="background:var(--g50);border-top:1px solid var(--g200);">
+  <div class="wrap">
+    <div class="sh">
+      <div>
+        <span class="ey">IT-Management (ITM)</span>
+        <h2 style="margin-top:10px;">Wirksame Organisation &amp; Instrumente</h2>
+      </div>
+      <span class="sh-count">2 Schulungen</span>
+    </div>
+
+    <!-- LITM -->
+    <div class="t-detail" id="litm">
+      <div class="t-detail-head" onclick="toggleDetail(this)">
+        <div class="t-detail-left">
+          <span class="t-detail-code">LITM</span>
+          <div class="t-detail-info">
+            <h3>Wirksames Lean IT-Instrumentarium</h3>
+            <p class="t-detail-tagline">Operational &amp; Strategic Excellence und das „lean"</p>
+          </div>
+        </div>
+        <div class="t-detail-right">
+          <div class="t-detail-dates">
+            <strong>21.–22.09.26</strong>
+            03.–04.03.27
+          </div>
+          <a href="../kontakt/" class="btn btn-primary" style="padding:8px 16px;font-size:12px;" onclick="event.stopPropagation();">Anmelden</a>
+          <div class="t-detail-toggle">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="#666" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="t-detail-body">
+        <div class="t-grid">
+          <div class="t-content">
+            <h4>Schulungsziel: Wirksames &amp; effizientes IT-Management</h4>
+            <p>Ein wirksames und schlankes IT-Management-Instrumentarium ist Erfolgsvoraussetzung. Nur so konnen die zunehmenden Herausforderungen und IT-Komplexitat (z.B. KI) beherrscht werden.</p>
+            <ul>
+              <li>Wesentliche Herausforderungen im strategischen und operativen IT-Management und Erfolgsfaktoren</li>
+              <li>Best-Practice-Instrumente und deren Zusammenspiel</li>
+              <li>Leitfaden fur die individuelle Konfiguration</li>
+              <li>Leanisieren eines ganzheitlichen IT-Instrumentariums</li>
+            </ul>
+            <h4>Inhalte</h4>
+            <ul>
+              <li>Herausforderungen und Ziele im strategischen und operativen IT-Management</li>
+              <li>Value Streams: Strategy-to-Masterplan, IT-Steuerung, Finanz-Controlling, GRC, IT-Fuhrung</li>
+              <li>Wirksames Lean IT-Management-Instrumentarium: Zusammenspiel, Wirksamkeit, Handhabbarkeit</li>
+              <li>Vorgehen Ziel-Bild &amp; Roadmap fur Ihr wirksames Lean IT-Instrumentarium</li>
+            </ul>
+          </div>
+          <div class="t-sidebar">
+            <div class="t-meta-row"><span class="t-meta-label">Trainerin</span><span class="t-meta-val">Inge Hanschke</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Dauer</span><span class="t-meta-val">2 Tage</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Sprache</span><span class="t-meta-val">Deutsch</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Level</span><span class="t-meta-val">Fortgeschritten</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Zielgruppe</span><span class="t-meta-val">IT-Verantwortliche, IT-Strategen, Unternehmensarchitekten</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Preis</span><span class="t-meta-val" style="color:var(--red);font-size:1.1rem;">1.970 EUR</span></div>
+            <div class="t-dates-list">
+              <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--g400);margin-bottom:8px;">Termine</div>
+              <div class="t-date-item">
+                <span class="t-date-val">21.–22. September 2026</span>
+                <a href="../kontakt/" class="btn btn-primary" style="padding:6px 14px;font-size:11px;">Anmelden</a>
+              </div>
+              <div class="t-date-item">
+                <span class="t-date-val">03.–04. Marz 2027</span>
+                <a href="../kontakt/" class="btn btn-primary" style="padding:6px 14px;font-size:11px;">Anmelden</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EFF -->
+    <div class="t-detail" id="eff">
+      <div class="t-detail-head" onclick="toggleDetail(this)">
+        <div class="t-detail-left">
+          <span class="t-detail-code">EFF</span>
+          <div class="t-detail-info">
+            <h3>Effizientes Management einer kleinen oder grossen IT</h3>
+            <p class="t-detail-tagline">Hands-on Best-Practices fur IT-Management</p>
+          </div>
+        </div>
+        <div class="t-detail-right">
+          <div class="t-detail-dates">
+            <strong>Folgt in Kurze</strong>
+          </div>
+          <a href="../kontakt/" class="btn btn-primary" style="padding:8px 16px;font-size:12px;" onclick="event.stopPropagation();">Anmelden</a>
+          <div class="t-detail-toggle">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="#666" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="t-detail-body">
+        <div class="t-grid">
+          <div class="t-content">
+            <h4>Schulungsziel: Hands-on Best-Practices fur IT-Management</h4>
+            <p>IT-Management: wie manage ich EFFIZIENT eine (kleine oder grosse) IT in einem Unternehmen und wie nutze ich die unterschiedlichen IT-Instrumente ganzheitlich und integriert.</p>
+            <p>Detaillierte Inhalte folgen in Kurze.</p>
+          </div>
+          <div class="t-sidebar">
+            <div class="t-meta-row"><span class="t-meta-label">Trainer</span><span class="t-meta-val">Werner Zengler</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Dauer</span><span class="t-meta-val">2 Tage</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Sprache</span><span class="t-meta-val">Deutsch</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Level</span><span class="t-meta-val">Experte</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Zielgruppe</span><span class="t-meta-val">IT-Verantwortliche, IT-Strategen</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Preis</span><span class="t-meta-val" style="color:var(--red);font-size:1.1rem;">1.970 EUR</span></div>
+            <div class="t-dates-list">
+              <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--g400);margin-bottom:8px;">Termine</div>
+              <div class="t-date-item">
+                <span class="t-date-val" style="color:var(--g400);">Termin folgt in Kurze</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== BLOCK 3: EAM ===== -->
+<section id="eam" class="sec" style="background:var(--white);">
+  <div class="wrap">
+    <div class="sh">
+      <div>
+        <span class="ey">Enterprise Architecture Management (EAM)</span>
+        <h2 style="margin-top:10px;">Wirksame Enterprise &amp; IT-Architekturen</h2>
+      </div>
+      <span class="sh-count">3 Schulungen</span>
+    </div>
+
+    <!-- EAM1 -->
+    <div class="t-detail" id="eam1">
+      <div class="t-detail-head" onclick="toggleDetail(this)">
+        <div class="t-detail-left">
+          <span class="t-detail-code">EAM1</span>
+          <div class="t-detail-info">
+            <h3>Einstieg in EAM</h3>
+            <p class="t-detail-tagline">Erste Schritte &amp; Best-Practice-EAM im Uberblick</p>
+          </div>
+        </div>
+        <div class="t-detail-right">
+          <div class="t-detail-dates">
+            <strong>11.–12.06.26</strong>
+            10.–11.09.26
+          </div>
+          <a href="../kontakt/" class="btn btn-primary" style="padding:8px 16px;font-size:12px;" onclick="event.stopPropagation();">Anmelden</a>
+          <div class="t-detail-toggle">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="#666" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="t-detail-body">
+        <div class="t-grid">
+          <div class="t-content">
+            <h4>Schulungsziel: EAM-Grundlagen</h4>
+            <ul>
+              <li>Uberblick uber EA-Frameworks und verbreitete Ansatze aus der Praxis</li>
+              <li>Wesentliche fachliche &amp; technische Strukturen und Visualisierungen des EAM</li>
+              <li>Best-Practice-EAM kennenlernen</li>
+              <li>Verschiedene Stakeholder und deren Perspektiven</li>
+              <li>Wesentliche Aspekte anhand von Beispielen einuben</li>
+            </ul>
+            <h4>Inhalte</h4>
+            <ul>
+              <li>EAM im Uberblick: EA Frameworks (Zachman, TOGAF), Best-Practice-EAM</li>
+              <li>Best-Practice-Unternehmensarchitektur: Strukturen und Empfehlungen</li>
+              <li>Best-Practice-Visualisierungen: Zusammenhange, Abhangigkeiten, Handlungsbedarf</li>
+              <li>Nutzen durch EAM generieren: Beantworten der individuellen Fragestellungen</li>
+              <li>Stakeholder-Analyse: Sponsoren, Nutzniesser, Datenlieferanten</li>
+              <li>Technologiemanagement: TRM, Lifecycle-Management, technische Standardisierung</li>
+              <li>Ausblick strategische IT-Planung mit Ziel-Bild</li>
+              <li>Nutzenorientierte Quick-win-basierte Einfuhrung von EAM</li>
+              <li>Uberblick uber EAM-Tools</li>
+            </ul>
+          </div>
+          <div class="t-sidebar">
+            <div class="t-meta-row"><span class="t-meta-label">Trainerin</span><span class="t-meta-val">Inge Hanschke</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Dauer</span><span class="t-meta-val">2 Tage</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Sprache</span><span class="t-meta-val">Deutsch</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Level</span><span class="t-meta-val">Einsteiger</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Zielgruppe</span><span class="t-meta-val">Unternehmensarchitekten und „Anwender" von EAM</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Preis</span><span class="t-meta-val" style="color:var(--red);font-size:1.1rem;">1.970 EUR</span></div>
+            <div class="t-dates-list">
+              <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--g400);margin-bottom:8px;">Termine</div>
+              <div class="t-date-item">
+                <span class="t-date-val">11.–12. Juni 2026</span>
+                <a href="../kontakt/" class="btn btn-primary" style="padding:6px 14px;font-size:11px;">Anmelden</a>
+              </div>
+              <div class="t-date-item">
+                <span class="t-date-val">10.–11. September 2026</span>
+                <a href="../kontakt/" class="btn btn-primary" style="padding:6px 14px;font-size:11px;">Anmelden</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EAM2 -->
+    <div class="t-detail" id="eam2">
+      <div class="t-detail-head" onclick="toggleDetail(this)">
+        <div class="t-detail-left">
+          <span class="t-detail-code">EAM2</span>
+          <div class="t-detail-info">
+            <h3>EAM-Nutzen erhohen</h3>
+            <p class="t-detail-tagline">Ausbau &amp; Verankerung von EAM — Tipps &amp; Tricks</p>
+          </div>
+        </div>
+        <div class="t-detail-right">
+          <div class="t-detail-dates">
+            <strong>16.–17.04.26</strong>
+            22.–23.07.26 · 03.–04.02.27
+          </div>
+          <a href="../kontakt/" class="btn btn-primary" style="padding:8px 16px;font-size:12px;" onclick="event.stopPropagation();">Anmelden</a>
+          <div class="t-detail-toggle">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="#666" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="t-detail-body">
+        <div class="t-grid">
+          <div class="t-content">
+            <h4>Schulungsziel: EAM-Nutzen erhohen</h4>
+            <ul>
+              <li>EAM optimieren und weiter ausbauen, um den Nutzen zu erhohen</li>
+              <li>EAM-Reifegrad objektiv und systematisch einschatzen</li>
+              <li>Tipps &amp; Tricks fur aktuelle Herausforderungen aus der Best-Practice-EAM</li>
+              <li>Ideen fur Gestaltung des Ziel-Bilds oder der Solution Architektur</li>
+              <li>Antworten zur Verankerung von EAM in der Organisation</li>
+            </ul>
+            <h4>Inhalte</h4>
+            <ul>
+              <li>Aufnahme konkreter Fragestellungen der Teilnehmer</li>
+              <li>EAM-Reifegrad: Standortbestimmung und nachste Schritte</li>
+              <li>Nutzen erhohen: Best-Practice-Bausteine anhand konkreter Beispiele</li>
+              <li>Fachliche und technische Ziel-Bild-Gestaltung sowie Masterplanung</li>
+              <li>EAM aufwandsarm zum Fliegen bringen</li>
+              <li>EA Governance und Verankerung in der Organisation</li>
+              <li>Tipps und Tricks fur Ihre Herausforderungen</li>
+            </ul>
+          </div>
+          <div class="t-sidebar">
+            <div class="t-meta-row"><span class="t-meta-label">Trainerin</span><span class="t-meta-val">Inge Hanschke</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Dauer</span><span class="t-meta-val">2 Tage</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Sprache</span><span class="t-meta-val">Deutsch</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Level</span><span class="t-meta-val">Fortgeschritten</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Voraussetzung</span><span class="t-meta-val">EAM I</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Zielgruppe</span><span class="t-meta-val">Unternehmensarchitekten und „Anwender" von EAM</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Preis</span><span class="t-meta-val" style="color:var(--red);font-size:1.1rem;">1.970 EUR</span></div>
+            <div class="t-dates-list">
+              <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--g400);margin-bottom:8px;">Termine</div>
+              <div class="t-date-item">
+                <span class="t-date-val">16.–17. April 2026</span>
+                <a href="../kontakt/" class="btn btn-primary" style="padding:6px 14px;font-size:11px;">Anmelden</a>
+              </div>
+              <div class="t-date-item">
+                <span class="t-date-val">22.–23. Juli 2026</span>
+                <a href="../kontakt/" class="btn btn-primary" style="padding:6px 14px;font-size:11px;">Anmelden</a>
+              </div>
+              <div class="t-date-item">
+                <span class="t-date-val">03.–04. Februar 2027</span>
+                <a href="../kontakt/" class="btn btn-primary" style="padding:6px 14px;font-size:11px;">Anmelden</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BA4D -->
+    <div class="t-detail" id="ba4d">
+      <div class="t-detail-head" onclick="toggleDetail(this)">
+        <div class="t-detail-left">
+          <span class="t-detail-code">BA4D</span>
+          <div class="t-detail-info">
+            <h3>Business Architecture 4 Digitalization</h3>
+            <p class="t-detail-tagline">Nutzen aus Geschaftsarchitektur ziehen</p>
+          </div>
+        </div>
+        <div class="t-detail-right">
+          <div class="t-detail-dates">
+            <strong>23.–24.09.26</strong>
+            03.–04.03.27
+          </div>
+          <a href="../kontakt/" class="btn btn-primary" style="padding:8px 16px;font-size:12px;" onclick="event.stopPropagation();">Anmelden</a>
+          <div class="t-detail-toggle">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="#666" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="t-detail-body">
+        <div class="t-grid">
+          <div class="t-content">
+            <h4>Schulungsziel: Nutzen aus Geschaftsarchitektur ziehen</h4>
+            <p>Weiterentwicklung und Operationalisierung des aktuellen Geschaftsmodells durch Business Capability Management, Demand Management, Datenmanagement &amp; Organisation 4.0.</p>
+            <ul>
+              <li>Warum, Was und Wie einer Geschaftsarchitektur</li>
+              <li>Business Capability Management und dessen Nutzen-Use-Cases</li>
+              <li>Handhabbares Datenmanagement aufbauen</li>
+              <li>Anforderungen und notwendige Veranderungen Richtung Organisation 4.0</li>
+            </ul>
+            <h4>Inhalte</h4>
+            <ul>
+              <li>Was ist eine Geschaftsarchitektur? Bestandteile und Nutzen-Use-Cases</li>
+              <li>Business Capability Map als fachliches Ziel-Bild: Vorgehen zur Ableitung</li>
+              <li>Lean Demand Management</li>
+              <li>Handhabbares Datenmanagement: Methoden, Granularitaten, Datenschutz, Cloud</li>
+              <li>Organisation der Zukunft: Veranderungen fur den digitalen Wandel</li>
+            </ul>
+          </div>
+          <div class="t-sidebar">
+            <div class="t-meta-row"><span class="t-meta-label">Trainerin</span><span class="t-meta-val">Inge Hanschke</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Dauer</span><span class="t-meta-val">2 Tage</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Sprache</span><span class="t-meta-val">Deutsch</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Level</span><span class="t-meta-val">Einsteiger / Fortgeschritten</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Zielgruppe</span><span class="t-meta-val">Strategen, Unternehmensarchitekten, Business &amp; IT</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Preis</span><span class="t-meta-val" style="color:var(--red);font-size:1.1rem;">1.970 EUR</span></div>
+            <div class="t-dates-list">
+              <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--g400);margin-bottom:8px;">Termine</div>
+              <div class="t-date-item">
+                <span class="t-date-val">23.–24. September 2026</span>
+                <a href="../kontakt/" class="btn btn-primary" style="padding:6px 14px;font-size:11px;">Anmelden</a>
+              </div>
+              <div class="t-date-item">
+                <span class="t-date-val">03.–04. Marz 2027</span>
+                <a href="../kontakt/" class="btn btn-primary" style="padding:6px 14px;font-size:11px;">Anmelden</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== BLOCK 4: KI & DATA ===== -->
+<section id="kidata" class="sec" style="background:var(--g50);border-top:1px solid var(--g200);">
+  <div class="wrap">
+    <div class="sh">
+      <div>
+        <span class="ey">KI &amp; Data</span>
+        <h2 style="margin-top:10px;">Mehrwert aus KI &amp; Daten</h2>
+      </div>
+      <span class="sh-count">1 Schulung</span>
+    </div>
+
+    <!-- KI, BI & Data -->
+    <div class="t-detail" id="kibidata">
+      <div class="t-detail-head" onclick="toggleDetail(this)">
+        <div class="t-detail-left">
+          <span class="t-detail-code">KI, BI &amp; Data</span>
+          <div class="t-detail-info">
+            <h3>KI-, BI- &amp; Datenmanagement</h3>
+            <p class="t-detail-tagline">KI &amp; Data — der Schlussel fur den Erfolg</p>
+          </div>
+        </div>
+        <div class="t-detail-right">
+          <div class="t-detail-dates">
+            <strong>21.–22.10.26</strong>
+            03.–04.02.27
+          </div>
+          <a href="../kontakt/" class="btn btn-primary" style="padding:8px 16px;font-size:12px;" onclick="event.stopPropagation();">Anmelden</a>
+          <div class="t-detail-toggle">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="#666" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="t-detail-body">
+        <div class="t-grid">
+          <div class="t-content">
+            <h4>Schulungsziel: Datengetriebene KI vorantreiben</h4>
+            <p>Ohne sauberes Datenmanagement gibt es kein verlassliches BI, und ohne BI fehlen der KI oft die strukturierten Grundlagen.</p>
+            <ul>
+              <li>KI- &amp; Data-Strategie</li>
+              <li>Datenarchitektur mit KI &amp; BI</li>
+              <li>Handhabbares Datenmanagement aufbauen</li>
+              <li>KI- &amp; Data Governance</li>
+              <li>Ableitung Ihres Instrumentariums entsprechend Ihrer Anforderungen</li>
+            </ul>
+            <h4>Inhalte</h4>
+            <ul>
+              <li>Handhabbares Datenmanagement: Methoden, Beispiele, Granularitaten</li>
+              <li>Datenarchitektur &amp; Datenvisualisierung: KI &amp; BI, Dashboards (Power BI, Tableau), Self-Service BI</li>
+              <li>KI- &amp; Data Strategie &amp; Architekturen</li>
+              <li>KI-Anwendungsfalle: klassische KI, generierende und agentenbasierte KI</li>
+              <li>Data Governance &amp; Qualitat: „Garbage in, Garbage out"</li>
+              <li>Datenschutz &amp; Compliance: EU-DSGVO, KI-Governance (EU AI Act)</li>
+              <li>Leitfaden fur wirksames KI-, BI- und Datenmanagement</li>
+              <li>Tipps &amp; Tricks fur Ihre Herausforderungen</li>
+            </ul>
+          </div>
+          <div class="t-sidebar">
+            <div class="t-meta-row"><span class="t-meta-label">Trainerin</span><span class="t-meta-val">Inge Hanschke</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Dauer</span><span class="t-meta-val">2 Tage</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Sprache</span><span class="t-meta-val">Deutsch</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Level</span><span class="t-meta-val">Fortgeschritten</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Zielgruppe</span><span class="t-meta-val">Strategen, Domanenverantwortliche, Business &amp; IT</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Preis</span><span class="t-meta-val" style="color:var(--red);font-size:1.1rem;">1.970 EUR</span></div>
+            <div class="t-dates-list">
+              <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--g400);margin-bottom:8px;">Termine</div>
+              <div class="t-date-item">
+                <span class="t-date-val">21.–22. Oktober 2026</span>
+                <a href="../kontakt/" class="btn btn-primary" style="padding:6px 14px;font-size:11px;">Anmelden</a>
+              </div>
+              <div class="t-date-item">
+                <span class="t-date-val">03.–04. Februar 2027</span>
+                <a href="../kontakt/" class="btn btn-primary" style="padding:6px 14px;font-size:11px;">Anmelden</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== BLOCK 5: LEAN VALUE MANAGEMENT ===== -->
+<section id="lvm" class="sec" style="background:var(--white);">
+  <div class="wrap">
+    <div class="sh">
+      <div>
+        <span class="ey">Lean Value Management (LVM)</span>
+        <h2 style="margin-top:10px;">Demand-to-Value</h2>
+      </div>
+      <span class="sh-count">2 Schulungen</span>
+    </div>
+
+    <!-- BA I & II -->
+    <div class="t-detail" id="ba12">
+      <div class="t-detail-head" onclick="toggleDetail(this)">
+        <div class="t-detail-left">
+          <span class="t-detail-code">BA I &amp; II</span>
+          <div class="t-detail-info">
+            <h3>Lean Demand Management &amp; Business-Analyse</h3>
+            <p class="t-detail-tagline">Anforderungen ermitteln, dokumentieren, bewerten und Losungen konzipieren</p>
+          </div>
+        </div>
+        <div class="t-detail-right">
+          <div class="t-detail-dates">
+            <strong>08.–09.07.26</strong>
+            21.–22.10.26
+          </div>
+          <a href="../kontakt/" class="btn btn-primary" style="padding:8px 16px;font-size:12px;" onclick="event.stopPropagation();">Anmelden</a>
+          <div class="t-detail-toggle">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="#666" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="t-detail-body">
+        <div class="t-grid">
+          <div class="t-content">
+            <h4>Schulungsziel: Systematisches Management der Anforderungen (BA I) &amp; selbst modellieren (BA II)</h4>
+            <p><strong>BA I:</strong> Die wirklichen Anforderungen uber Fragetechniken aus den Stakeholdern „herausholen". Anforderungen treffend dokumentieren. Tragfahige fachliche Losungen und deren Roadmap konzipieren.</p>
+            <p><strong>BA II:</strong> Prozessmodelle (BPMN/ARIS), Use-Cases, fachliches Design, Datenmodellierung (ER-Modelle), weitere Modelle im Zusammenspiel anhand eines Fallbeispiels.</p>
+            <h4>Inhalte BA I</h4>
+            <ul>
+              <li>Einfuhrung in Business-Analyse &amp; Demand Management</li>
+              <li>Anforderungsarten (Kano-Modell), Begriffe, Methoden und Modelle</li>
+              <li>Anforderungsermittlungs- und Archaologietechniken</li>
+              <li>Fragetechniken: 5W, essentielle Fragen, Interviews</li>
+              <li>Formulierung von Anforderungen: Ergebnistypen, Best Practices, Backlog</li>
+              <li>Kreativitatstechniken: Methode 6-3-5, Mindmapping, Ishikawa</li>
+              <li>Bewerten von Anforderungen: Priorisieren, Schatzen, Zerlegen</li>
+              <li>Qualitatssicherung, Anderungsmanagement, vertragliche Aspekte</li>
+            </ul>
+            <h4>Inhalte BA II</h4>
+            <ul>
+              <li>Prozessmanagement: Business Canvas, Prozesslandkarte, BPMN, Wertstromanalyse</li>
+              <li>Use-Cases identifizieren, verfeinern und dokumentieren</li>
+              <li>Logische und konzeptionelle Losungssicht, fachliche Komponentenmodelle</li>
+              <li>Datenmodellierung mit ER-Modellen</li>
+              <li>Datenflussmodellierung, Granularitaten und Zusammenspiel der Modelle</li>
+            </ul>
+          </div>
+          <div class="t-sidebar">
+            <div class="t-meta-row"><span class="t-meta-label">Trainerin</span><span class="t-meta-val">Inge Hanschke</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Dauer</span><span class="t-meta-val">2 Tage</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Sprache</span><span class="t-meta-val">Deutsch</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Level</span><span class="t-meta-val">Anfanger (BA I) / Fortgeschritten (BA II)</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Zielgruppe</span><span class="t-meta-val">Business-Analysten, Demand-Manager</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Preis</span><span class="t-meta-val" style="color:var(--red);font-size:1.1rem;">1.970 EUR</span></div>
+            <div class="t-dates-list">
+              <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--g400);margin-bottom:8px;">Termine</div>
+              <div class="t-date-item">
+                <span class="t-date-val">08.–09. Juli 2026</span>
+                <a href="../kontakt/" class="btn btn-primary" style="padding:6px 14px;font-size:11px;">Anmelden</a>
+              </div>
+              <div class="t-date-item">
+                <span class="t-date-val">21.–22. Oktober 2026</span>
+                <a href="../kontakt/" class="btn btn-primary" style="padding:6px 14px;font-size:11px;">Anmelden</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LPM -->
+    <div class="t-detail" id="lpm">
+      <div class="t-detail-head" onclick="toggleDetail(this)">
+        <div class="t-detail-left">
+          <span class="t-detail-code">LPM</span>
+          <div class="t-detail-info">
+            <h3>Lean / IT-Portfoliomanagement</h3>
+            <p class="t-detail-tagline">KI &amp; Lean — der Schlussel fur ein wirksames und handhabbares IT-Portfoliomanagement</p>
+          </div>
+        </div>
+        <div class="t-detail-right">
+          <div class="t-detail-dates">
+            <strong>05.–06.08.26</strong>
+            09.–10.12.26
+          </div>
+          <a href="../kontakt/" class="btn btn-primary" style="padding:8px 16px;font-size:12px;" onclick="event.stopPropagation();">Anmelden</a>
+          <div class="t-detail-toggle">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="#666" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="t-detail-body">
+        <div class="t-grid">
+          <div class="t-content">
+            <h4>Schulungsziel: Besseres &amp; effizientes Portfoliomanagement</h4>
+            <p>Lean / IT-Portfoliomanagement: IT-Investitionen und Ressourcen so steuern, dass mit minimalem burokratischem Aufwand der maximale geschaftliche Nutzen erzielt wird.</p>
+            <ul>
+              <li>Demand-to-Value: Von der Bedarfsentstehung bis zur strategischen Steuerung</li>
+              <li>Lean / IT-Portfoliomanagement zum Selbstlaufer</li>
+              <li>Neue KI-gestutzte Arbeitsweise im IT-Projektportfoliomanagement</li>
+              <li>Verschlanken durch die Methode Leanize</li>
+              <li>Skills fur ein wirksames IT-Portfoliomanagement und Up-Skilling</li>
+            </ul>
+            <h4>Inhalte</h4>
+            <ul>
+              <li>Lean IT-Portfoliomanagement State-of-the-art, Herausforderungen und Erfolgsfaktoren</li>
+              <li>Skill-Management &amp; Ressourcenmanagement als wichtige Saulen</li>
+              <li>Automatisierung und KI-gestutztes IT-Portfoliomanagement</li>
+              <li>Handhabbares und wirksames Lean IT-Portfoliomanagement im IT-Management-Instrumentarium</li>
+              <li>Verankerung in der Organisation: Prozesse, Gremien</li>
+              <li>Leitfaden fur Ihr wirksames Lean / IT-Portfoliomanagement</li>
+              <li>Tipps &amp; Tricks fur Ihre Herausforderungen</li>
+            </ul>
+          </div>
+          <div class="t-sidebar">
+            <div class="t-meta-row"><span class="t-meta-label">Trainerin</span><span class="t-meta-val">Inge Hanschke</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Dauer</span><span class="t-meta-val">2 Tage</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Sprache</span><span class="t-meta-val">Deutsch</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Level</span><span class="t-meta-val">Fortgeschritten</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Zielgruppe</span><span class="t-meta-val">IT-Manager, IT-Strategen, Portfoliomanager</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Preis</span><span class="t-meta-val" style="color:var(--red);font-size:1.1rem;">1.970 EUR</span></div>
+            <div class="t-dates-list">
+              <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--g400);margin-bottom:8px;">Termine</div>
+              <div class="t-date-item">
+                <span class="t-date-val">05.–06. August 2026</span>
+                <a href="../kontakt/" class="btn btn-primary" style="padding:6px 14px;font-size:11px;">Anmelden</a>
+              </div>
+              <div class="t-date-item">
+                <span class="t-date-val">09.–10. Dezember 2026</span>
+                <a href="../kontakt/" class="btn btn-primary" style="padding:6px 14px;font-size:11px;">Anmelden</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== BLUE DIVIDER ===== -->
+<div class="blue-divider" id="persoenlich">
+  <div class="wrap">
+    <div class="badge">In Abstimmung</div>
+    <h2>Personliche Kompetenz &amp; Fuhrungskompetenz</h2>
+    <p>Mehrwert fur die personliche Weiterentwicklung. Die folgenden Trainings sind aktuell in Abstimmung — initiale Inhalte sind bereits aufgenommen.</p>
+  </div>
+</div>
+
+<!-- ===== BLUE TRAININGS: PERSOENLICHE KOMPETENZ ===== -->
+<section class="sec" style="background:var(--blue-bg);border-bottom:1px solid #bfdbfe;">
+  <div class="wrap">
+    <div class="sh" style="border-bottom-color:var(--blue);">
+      <div>
+        <span class="ey blue">Personliche Kompetenz</span>
+        <h2 style="margin-top:10px;">Resilienz, Mentale Starke &amp; Kommunikation</h2>
+      </div>
+      <span class="sh-count">2 Trainings</span>
+    </div>
+
+    <!-- RMS -->
+    <div class="t-detail blue-detail" id="rms">
+      <div class="t-detail-head" onclick="toggleDetail(this)">
+        <div class="t-detail-left">
+          <span class="t-detail-code">RMS</span>
+          <div class="t-detail-info">
+            <h3>Resilienz &amp; Mentale Starke</h3>
+            <p class="t-detail-tagline">Selbstkompetenz — Grundlage der Resilienz</p>
+          </div>
+        </div>
+        <div class="t-detail-right">
+          <div class="t-detail-dates">
+            <strong>21.–22.10.26</strong>
+          </div>
+          <a href="../kontakt/" class="btn btn-blue" style="padding:8px 16px;font-size:12px;" onclick="event.stopPropagation();">Anmelden</a>
+          <div class="t-detail-toggle">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="#666" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="t-detail-body">
+        <div class="t-grid">
+          <div class="t-content">
+            <h4>Schulungsziel</h4>
+            <p>Grundlage der Resilienz, Resilienz-Faktoren, Identifikation personlicher Resilienz-Profile, Entwicklung von praktischen Resilienz-Hacks fur den Alltag und Entwicklung eines flexiblen Mindsets (Growth Mindset).</p>
+          </div>
+          <div class="t-sidebar">
+            <div class="t-meta-row"><span class="t-meta-label">Dauer</span><span class="t-meta-val">2 Tage</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Sprache</span><span class="t-meta-val">Deutsch</span></div>
+            <div class="t-dates-list">
+              <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--g400);margin-bottom:8px;">Termine</div>
+              <div class="t-date-item">
+                <span class="t-date-val">21.–22. Oktober 2026</span>
+                <a href="../kontakt/" class="btn btn-blue" style="padding:6px 14px;font-size:11px;">Anmelden</a>
+              </div>
+              <div class="t-date-item">
+                <span class="t-date-val" style="color:var(--g400);">Vertiefungstermine auf Anfrage</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- KOM -->
+    <div class="t-detail blue-detail" id="kom">
+      <div class="t-detail-head" onclick="toggleDetail(this)">
+        <div class="t-detail-left">
+          <span class="t-detail-code">KOM</span>
+          <div class="t-detail-info">
+            <h3>Kommunikation</h3>
+            <p class="t-detail-tagline">Optimierung des Informationsaustausches und der Beziehungsgestaltung</p>
+          </div>
+        </div>
+        <div class="t-detail-right">
+          <div class="t-detail-dates">
+            <strong>Folgt in Kurze</strong>
+          </div>
+          <a href="../kontakt/" class="btn btn-blue" style="padding:8px 16px;font-size:12px;" onclick="event.stopPropagation();">Anfragen</a>
+          <div class="t-detail-toggle">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="#666" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="t-detail-body">
+        <div class="t-grid">
+          <div class="t-content">
+            <p>Inhalte werden aktuell abgestimmt. Detaillierte Beschreibung folgt in Kurze.</p>
+          </div>
+          <div class="t-sidebar">
+            <div class="t-meta-row"><span class="t-meta-label">Status</span><span class="t-meta-val" style="color:var(--blue);">In Abstimmung</span></div>
+            <div class="t-meta-row"><span class="t-meta-label">Termin</span><span class="t-meta-val">Folgt in Kurze</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== BLUE TRAININGS: FUEHRUNGSKOMPETENZ ===== -->
+<section id="fuehrung" class="sec" style="background:var(--white);border-top:1px solid #bfdbfe;">
+  <div class="wrap">
+    <div class="sh" style="border-bottom-color:var(--blue);">
+      <div>
+        <span class="ey blue">Fuhrungskompetenz</span>
+        <h2 style="margin-top:10px;">Zielgerichtet fuhren, motivieren &amp; Konfliktmanagement</h2>
+      </div>
+      <span class="sh-count">3 Trainings</span>
+    </div>
+
+    <!-- LEAD -->
+    <div class="t-detail blue-detail" id="lead">
+      <div class="t-detail-head" onclick="toggleDetail(this)">
+        <div class="t-detail-left">
+          <span class="t-detail-code">LEAD</span>
+          <div class="t-detail-info">
+            <h3>Leadership-Journey</h3>
+            <p class="t-detail-tagline">Fuhrungskompetenz — Details folgen</p>
+          </div>
+        </div>
+        <div class="t-detail-right">
+          <div class="t-detail-dates"><strong>Folgt in Kurze</strong></div>
+          <a href="../kontakt/" class="btn btn-blue" style="padding:8px 16px;font-size:12px;" onclick="event.stopPropagation();">Anfragen</a>
+          <div class="t-detail-toggle">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="#666" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="t-detail-body">
+        <div class="t-grid">
+          <div class="t-content"><p>Inhalte werden aktuell abgestimmt. Detaillierte Beschreibung folgt in Kurze.</p></div>
+          <div class="t-sidebar">
+            <div class="t-meta-row"><span class="t-meta-label">Status</span><span class="t-meta-val" style="color:var(--blue);">In Abstimmung</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOD -->
+    <div class="t-detail blue-detail" id="mod">
+      <div class="t-detail-head" onclick="toggleDetail(this)">
+        <div class="t-detail-left">
+          <span class="t-detail-code">MOD</span>
+          <div class="t-detail-info">
+            <h3>Moderation</h3>
+            <p class="t-detail-tagline">Moderieren von schwierigen / konfliktreichen Workshops</p>
+          </div>
+        </div>
+        <div class="t-detail-right">
+          <div class="t-detail-dates"><strong>Folgt in Kurze</strong></div>
+          <a href="../kontakt/" class="btn btn-blue" style="padding:8px 16px;font-size:12px;" onclick="event.stopPropagation();">Anfragen</a>
+          <div class="t-detail-toggle">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="#666" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="t-detail-body">
+        <div class="t-grid">
+          <div class="t-content"><p>Inhalte werden aktuell abgestimmt. Detaillierte Beschreibung folgt in Kurze.</p></div>
+          <div class="t-sidebar">
+            <div class="t-meta-row"><span class="t-meta-label">Status</span><span class="t-meta-val" style="color:var(--blue);">In Abstimmung</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOOLS -->
+    <div class="t-detail blue-detail" id="tools">
+      <div class="t-detail-head" onclick="toggleDetail(this)">
+        <div class="t-detail-left">
+          <span class="t-detail-code">TOOLS</span>
+          <div class="t-detail-info">
+            <h3>IT-Management Methoden- &amp; Tool-Box</h3>
+            <p class="t-detail-tagline">Fuhrungshandwerk: Von Strategieentwicklung uber Planen, Steuern, Mitarbeiter fuhren bis Risikomanagement</p>
+          </div>
+        </div>
+        <div class="t-detail-right">
+          <div class="t-detail-dates"><strong>Folgt in Kurze</strong></div>
+          <a href="../kontakt/" class="btn btn-blue" style="padding:8px 16px;font-size:12px;" onclick="event.stopPropagation();">Anfragen</a>
+          <div class="t-detail-toggle">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="#666" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="t-detail-body">
+        <div class="t-grid">
+          <div class="t-content"><p>Inhalte werden aktuell abgestimmt. Detaillierte Beschreibung folgt in Kurze.</p></div>
+          <div class="t-sidebar">
+            <div class="t-meta-row"><span class="t-meta-label">Status</span><span class="t-meta-val" style="color:var(--blue);">In Abstimmung</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -646,19 +1322,19 @@
   <div class="wrap">
     <div class="cta-inner">
       <div class="cta-text">
-        <span class="ey">Jetzt buchen</span>
-        <h2>Webinar oder Schulung.<br>Termin anfragen.</h2>
+        <span class="ey">Jetzt anmelden</span>
+        <h2>Schulung buchen.<br>Direkt.</h2>
         <p>
-          Webinar-Termin, Schulungsanmeldung oder Inhouse-Anfrage —
-          Rückmeldung innerhalb von 24 Stunden. Direkt und sachlich.
+          Schulungsanmeldung oder Inhouse-Anfrage —
+          Ruckmeldung innerhalb von 24 Stunden. Alle Schulungen auch als Inhouse-Format buchbar.
         </p>
       </div>
       <div class="cta-acts">
-        <a href="../#kontakt" class="btn btn-primary">
-          Termin anfragen
+        <a href="../kontakt/" class="btn btn-primary">
+          Anmelden
           <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a href="../leistungen/" class="btn btn-outline-w">Alle Leistungen</a>
+        <a href="../leistungen/" class="btn btn-outline-w">Alle Beratungsleistungen</a>
       </div>
     </div>
   </div>
@@ -668,17 +1344,16 @@
 <footer>
   <div class="wrap">
     <div class="fi-w">
-      <span class="fcopy">© 2026 Hanschke Consulting · Inge Hanschke · Alle Rechte vorbehalten.</span>
+      <span class="fcopy">&copy; 2026 Hanschke Consulting · Inge Hanschke · Alle Rechte vorbehalten.</span>
       <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
         <nav class="fnav">
           <a onclick="openImpressum()">Impressum</a>
           <a onclick="openImpressum('datenschutz')">Datenschutz</a>
           <a href="https://www.linkedin.com/in/ingehanschke/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://www.hanser-fachbuch.de" target="_blank" rel="noopener">Hanser Verlag</a>
         </nav>
         <div style="display:flex;gap:6px;align-items:center;border-left:1px solid rgba(255,255,255,.1);padding-left:20px;">
           <a href="#" style="font-size:11px;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.85);padding:3px 8px;background:rgba(255,255,255,.12);border-radius:2px;">DE</a>
-          <a href="#" title="English version coming soon" style="font-size:11px;font-weight:600;letter-spacing:.06em;color:rgba(255,255,255,.3);padding:3px 8px;border-radius:2px;">EN</a>
+          <a href="#" style="font-size:11px;font-weight:600;letter-spacing:.06em;color:rgba(255,255,255,.3);padding:3px 8px;">EN</a>
         </div>
       </div>
     </div>
@@ -687,30 +1362,21 @@
 
 <!-- IMPRESSUM OVERLAY -->
 <div id="impressum-page">
-  <button class="imp-close" onclick="closeImpressum()">✕</button>
+  <button class="imp-close" onclick="closeImpressum()">&#10005;</button>
   <div class="wrap">
     <div class="imp-content">
       <h1 id="imp-title">Impressum</h1>
       <div id="imp-main">
-        <h2>Angaben gemäß § 5 TMG</h2>
-        <address>Inge Hanschke<br>Straßl ins Holz 15<br>81829 München<br>Deutschland</address>
+        <h2>Angaben gemass &sect; 5 TMG</h2>
+        <address>Inge Hanschke<br>Strassl ins Holz 15<br>81829 Munchen<br>Deutschland</address>
         <h2>Kontakt</h2>
         <p>E-Mail: <a href="mailto:info@hanschke-consulting.com">info@hanschke-consulting.com</a><br>Mobil: <a href="tel:+4915221000172">+49 (0)152 210 001 72</a></p>
-        <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+        <h2>Verantwortlich fur den Inhalt nach &sect; 55 Abs. 2 RStV</h2>
         <p>Inge Hanschke</p>
-        <h2>Haftungsausschluss</h2>
-        <h3>Haftung für Inhalte</h3>
-        <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>
-        <h3>Haftung für Links</h3>
-        <p>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
-        <h3>Urheberrecht</h3>
-        <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke unterliegen dem deutschen Urheberrecht. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
       </div>
       <div id="imp-datenschutz" style="display:none;">
-        <h2>Datenschutzerklärung</h2>
-        <p>Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten erhoben werden, erfolgt dies stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.</p>
-        <p>Wir weisen darauf hin, dass die Datenübertragung im Internet Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p>
-        <p>Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung wird hiermit ausdrücklich widersprochen.</p>
+        <h2>Datenschutzerklarung</h2>
+        <p>Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten moglich.</p>
       </div>
     </div>
   </div>
@@ -732,19 +1398,24 @@
     document.body.style.overflow = '';
   }
 
+  function toggleDetail(head) {
+    const block = head.closest('.t-detail');
+    block.classList.toggle('open');
+  }
+
   // Anchor nav active on scroll
-  const sectionIds = ['webinare','schulungen','inhouse'];
   const anavLinks = document.querySelectorAll('.anav-link');
+  const sections = ['sitm','itm','eam','kidata','lvm','persoenlich','fuehrung'];
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         anavLinks.forEach(l => l.classList.remove('act'));
-        const link = document.querySelector(`.anav-link[href="#${entry.target.id}"]`);
+        const link = document.querySelector('.anav-link[href="#'+entry.target.id+'"]');
         if (link) link.classList.add('act');
       }
     });
   }, { rootMargin: '-20% 0px -70% 0px' });
-  sectionIds.forEach(id => { const el = document.getElementById(id); if(el) observer.observe(el); });
+  sections.forEach(id => { const el = document.getElementById(id); if(el) observer.observe(el); });
 
   function openImpressum(section) {
     const page = document.getElementById('impressum-page');
@@ -759,6 +1430,15 @@
     document.body.style.overflow = '';
   }
   document.addEventListener('keydown', e => { if(e.key==='Escape') closeImpressum(); });
+
+  // Deep-link: open detail if hash matches
+  if(location.hash) {
+    const el = document.querySelector(location.hash);
+    if(el && el.classList.contains('t-detail')) {
+      el.classList.add('open');
+      setTimeout(() => el.scrollIntoView({behavior:'smooth', block:'start'}), 100);
+    }
+  }
 </script>
 <script src="https://visual-feedback-tool.vercel.app/api/embed.js?key=3d1b3cb26e7e52347690a5348e94a491c2b71b858fdd1a18"></script>
 </body>

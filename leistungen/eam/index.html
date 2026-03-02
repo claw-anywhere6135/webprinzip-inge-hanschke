@@ -96,7 +96,9 @@
     .nav-caret { width: 0; height: 0; border-left: 3.5px solid transparent; border-right: 3.5px solid transparent; border-top: 4px solid var(--g600); transition: transform .15s var(--ease), border-top-color .15s; flex-shrink: 0; margin-top: 1px; }
     .nav-drop > a:hover .nav-caret { border-top-color: var(--black); }
     .nav-drop:hover > a .nav-caret { transform: rotate(180deg); }
-    .drop-menu { display: none; position: absolute; top: calc(100% + 10px); left: 50%; transform: translateX(-50%); background: var(--white); border: 1px solid var(--g200); border-radius: 4px; box-shadow: 0 12px 40px rgba(0,0,0,.1); min-width: 250px; padding: 6px 0; z-index: 300; }
+    .nav-drop { position: relative; }
+    .drop-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: var(--white); border: 1px solid var(--g200); border-radius: 4px; box-shadow: 0 12px 40px rgba(0,0,0,.1); min-width: 250px; padding: 6px 0; padding-top: 16px; z-index: 300; }
+    .drop-menu::before { content: ''; position: absolute; top: -10px; left: 0; right: 0; height: 10px; background: transparent; }
     .nav-drop:hover .drop-menu { display: block; }
     .drop-menu a { display: block !important; padding: 9px 18px; font-size: 12.5px !important; font-weight: 500 !important; color: var(--g700) !important; transition: background .12s, color .12s; white-space: nowrap; border-bottom: none !important; }
     .drop-menu a:hover { background: var(--g50); color: var(--black) !important; }
@@ -268,6 +270,10 @@
       .exp-kpis { grid-template-columns: repeat(3, 1fr); }
       .fi-w { flex-direction: column; gap: 10px; text-align: center; }
     }
+
+    /* GRAPHIC PLACEHOLDER */
+    .grafik-ph { margin-top:20px; padding:18px 20px; background:var(--g50); border:1.5px dashed var(--g200); border-radius:var(--r); text-align:center; font-size:11px; font-weight:600; color:var(--g400); letter-spacing:.06em; text-transform:uppercase; display:flex; align-items:center; justify-content:center; gap:10px; }
+    .grafik-ph::before { content:''; display:block; width:28px; height:28px; border:1.5px solid var(--g200); border-radius:4px; flex-shrink:0; background:var(--g100); }
   </style>
 </head>
 <body>
@@ -458,6 +464,7 @@
           <span class="ltag">Governance</span>
           <span class="ltag">Optimierung</span>
         </div>
+        <div class="grafik-ph">Grafik folgt &nbsp;·&nbsp; © Inge Hanschke</div>
       </div>
     </div>
 
@@ -502,6 +509,7 @@
           <span class="ltag">KI-Governance</span>
           <span class="ltag">Roadmapping</span>
         </div>
+        <div class="grafik-ph">Grafik folgt &nbsp;·&nbsp; © Inge Hanschke</div>
       </div>
     </div>
 
@@ -538,6 +546,7 @@
             <span class="ltag">Business Capability</span>
             <span class="ltag">Ziel-Bild</span>
           </div>
+        <div class="grafik-ph">Grafik folgt &nbsp;·&nbsp; © Inge Hanschke</div>
         </div>
       </div>
     </div>

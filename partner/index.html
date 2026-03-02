@@ -68,6 +68,18 @@
     .mmenu.open { display:flex; }
     .mmenu a { font-size:1.05rem; font-weight:600; color:var(--black); padding:13px 0; border-bottom:1px solid var(--g100); }
     .mmenu .btn { margin-top:20px; align-self:flex-start; }
+    /* DROPDOWN NAV */
+    .nav-item { position: relative; list-style: none; }
+    .nav-drop > a { display: flex !important; align-items: center; gap: 5px; }
+    .nav-caret { width: 0; height: 0; border-left: 3.5px solid transparent; border-right: 3.5px solid transparent; border-top: 4px solid var(--g600); transition: transform .15s var(--ease), border-top-color .15s; flex-shrink: 0; margin-top: 1px; }
+    .nav-drop > a:hover .nav-caret { border-top-color: var(--black); }
+    .nav-drop:hover > a .nav-caret { transform: rotate(180deg); }
+    .drop-menu { display: none; position: absolute; top: calc(100% + 10px); left: 50%; transform: translateX(-50%); background: var(--white); border: 1px solid var(--g200); border-radius: 4px; box-shadow: 0 12px 40px rgba(0,0,0,.1); min-width: 250px; padding: 6px 0; z-index: 300; }
+    .nav-drop:hover .drop-menu { display: block; }
+    .drop-menu a { display: block !important; padding: 9px 18px; font-size: 12.5px !important; font-weight: 500 !important; color: var(--g700) !important; transition: background .12s, color .12s; white-space: nowrap; border-bottom: none !important; }
+    .drop-menu a:hover { background: var(--g50); color: var(--black) !important; }
+    .drop-divider { height: 1px; background: var(--g100); margin: 4px 8px; }
+    .mmenu-sub { padding-left: 24px !important; font-size: .9rem !important; font-weight: 500 !important; color: var(--g600) !important; }
 
     /* PAGE HERO */
     #page-hero { padding-top: 60px; background: var(--white); position: relative; overflow: hidden; }
@@ -193,11 +205,27 @@
       <span class="nav-logo-s">Hanschke Consulting</span>
     </a>
     <ul class="nav-links">
-      <li><a href="../leistungen/">Beratung</a></li>
+      <li class="nav-item nav-drop">
+        <a href="../leistungen/">Beratung <span class="nav-caret"></span></a>
+        <div class="drop-menu">
+          <a href="../leistungen/strategisches-it-management/">Strategisches IT-Management</a>
+          <a href="../leistungen/it-management/">IT-Management</a>
+          <a href="../leistungen/eam/">Enterprise Architecture Management</a>
+          <a href="../leistungen/ki-data/">KI &amp; Data</a>
+          <a href="../leistungen/lean-value-management/">Lean Value Management</a>
+          <a href="../leistungen/informationssicherheit/">Informationssicherheit</a>
+        </div>
+      </li>
+      <li class="nav-item nav-drop">
+        <a href="../trainings/">Schulungen <span class="nav-caret"></span></a>
+        <div class="drop-menu">
+          <a href="../trainings/schulungen/">Schulungen</a>
+          <a href="../trainings/webinare/">Webinare</a>
+        </div>
+      </li>
       <li><a href="../ueber-inge/">Über mich</a></li>
-      <li><a href="../trainings/">Schulungen</a></li>
       <li><a href="../buecher/">Bücher</a></li>
-      <li><a href="#" class="active">Partner</a></li>
+      <li><a href="../partner/">Partner</a></li>
       <li><a href="../events/">Events</a></li>
     </ul>
     <div class="nav-act">
@@ -212,12 +240,20 @@
 
 <div class="mmenu" id="mmenu">
   <a href="../leistungen/" onclick="closeMenu()">Beratung</a>
+  <a href="../leistungen/strategisches-it-management/" onclick="closeMenu()" class="mmenu-sub">Strategisches IT-Management</a>
+  <a href="../leistungen/it-management/" onclick="closeMenu()" class="mmenu-sub">IT-Management</a>
+  <a href="../leistungen/eam/" onclick="closeMenu()" class="mmenu-sub">Enterprise Architecture Management</a>
+  <a href="../leistungen/ki-data/" onclick="closeMenu()" class="mmenu-sub">KI &amp; Data</a>
+  <a href="../leistungen/lean-value-management/" onclick="closeMenu()" class="mmenu-sub">Lean Value Management</a>
+  <a href="../leistungen/informationssicherheit/" onclick="closeMenu()" class="mmenu-sub">Informationssicherheit</a>
+  <a href="../trainings/" onclick="closeMenu()">Schulungen</a>
+  <a href="../trainings/schulungen/" onclick="closeMenu()" class="mmenu-sub">Schulungen</a>
+  <a href="../trainings/webinare/" onclick="closeMenu()" class="mmenu-sub">Webinare</a>
   <a href="../ueber-inge/" onclick="closeMenu()">Über mich</a>
-  <a href="../trainings/" onclick="closeMenu()">Schulungen &amp; Webinare</a>
   <a href="../buecher/" onclick="closeMenu()">Bücher</a>
-  <a href="#" onclick="closeMenu()">Partner</a>
+  <a href="../partner/" onclick="closeMenu()">Partner</a>
   <a href="../events/" onclick="closeMenu()">Events</a>
-  <a href="../#kontakt" class="btn btn-primary" onclick="closeMenu()">Kontakt aufnehmen</a>
+  <a href="../kontakt/" class="btn btn-primary" onclick="closeMenu()">Kontakt aufnehmen</a>
 </div>
 
 <!-- PAGE HERO -->

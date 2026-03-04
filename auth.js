@@ -4,9 +4,6 @@
 
   if (sessionStorage.getItem(STORAGE_KEY) === 'ok') return;
 
-  // Passwortschutz greift erst ab 04.03.2026 23:00 CET
-  var activateAt = new Date('2026-03-04T22:00:00Z'); // 23:00 CET = 22:00 UTC
-  if (Date.now() < activateAt.getTime()) return;
 
   // Inject overlay + hide real content via CSS
   var style = document.createElement('style');
